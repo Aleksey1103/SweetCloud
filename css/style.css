@@ -42,6 +42,7 @@ html {
   font-size: 10px; }
 
 body {
+  position: relative;
   font-family: "MyriadPro";
   font-weight: normal;
   font-size: 16px;
@@ -1540,7 +1541,7 @@ main .bg-cloud-4_page_product-item {
 
 .modal-container {
   display: none;
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
@@ -1554,6 +1555,8 @@ main .bg-cloud-4_page_product-item {
     background-color: transparent;
     border: none;
     font-size: 40px;
+    line-height: 25px;
+    padding: 0;
     color: #ffffff;
     opacity: 0.7;
     -webkit-transition: 0.3s;
@@ -1565,7 +1568,7 @@ main .bg-cloud-4_page_product-item {
     position: relative;
     width: 40vw;
     height: 40vw;
-    margin: 5% auto 0;
+    margin: 15vh auto 0;
     overflow: hidden; }
     .modal-container__img img {
       position: absolute;
@@ -1579,9 +1582,9 @@ main .bg-cloud-4_page_product-item {
          object-fit: cover; }
   .modal-container__video {
     display: none;
-    width: 55vw;
-    height: 40vw;
-    margin: 5% auto 0; }
+    width: 50vw;
+    height: 30vw;
+    margin: 15vh auto 0; }
     .modal-container__video iframe {
       width: 100%;
       height: 100%; }
@@ -2187,10 +2190,10 @@ main .bg-cloud-2_page_order {
     height: 60vw;
     max-height: 700px; }
   .modal-container__video {
-    width: 80vw;
-    max-width: 935px;
-    height: 60vw;
-    max-height: 700px; } }
+    width: 75vw;
+    max-width: 875px;
+    height: 45vw;
+    max-height: 525px; } }
 @media (max-width: 1480px) {
   main .bg-cloud-1, main .bg-cloud-7, main .bg-cloud-8 {
     width: calc(50% - 515px); }
@@ -2534,6 +2537,7 @@ main .bg-cloud-2_page_order {
     margin-top: 30px; }
 
   .grid-container {
+    grid-template-columns: -webkit-max-content -webkit-max-content;
     grid-template-columns: -webkit-max-content max-content;
     grid-template-columns: max-content max-content;
     grid-template-rows: 1fr 1fr;
@@ -2564,12 +2568,6 @@ main .bg-cloud-2_page_order {
     .block-presentation-grid__item_2 {
       margin: 0 auto; }
 
-  .modal-container__img {
-    width: 60vw;
-    height: 60vw; }
-  .modal-container__video {
-    width: 80vw;
-    height: 60vw; }
   .modal-container__btn-close {
     top: 15px;
     right: 15px; } }
@@ -3314,5 +3312,4 @@ main .bg-cloud-2_page_order {
 
   .block-categories_page_product-item {
     display: none; } }
-
 /*# sourceMappingURL=style.css.map */
