@@ -1,9 +1,7 @@
 'use strict'
 
-$(document).ready(function(){
-    
-    $(function() {
-
+$(document).ready(function(){    
+   
         $(".product-list").slick({
 
             infinite: true,
@@ -33,8 +31,6 @@ $(document).ready(function(){
             ]
     
         });
-
-    });
 
     $(window).on("resize", function() {
 
