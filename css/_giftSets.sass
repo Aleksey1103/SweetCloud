@@ -1,0 +1,115 @@
+.block-gifts
+    &_page_gift_sets
+        .heading
+            &_block_gifts
+                padding-top: 30px
+        .block-gifts
+            &__container
+                padding-bottom: 11px
+            &__name
+                text-align: center
+                font-size: 25px
+                font-weight: normal
+            &__info
+                display: flex
+                margin: 28px 0 22px
+                font-size: 20px
+                justify-content: center
+                b, span
+                    margin-right: 4px           
+                &::before
+                    content: ''
+                    display: block
+                    width: 30px
+                    height: 30px
+                    background: url(../img/icon-cost.svg) center/cover no-repeat
+                    margin-right: 10px
+            &__description
+                padding: 0 111px 30px
+                text-align: center
+                line-height: 19px
+            &__buttons
+                display: flex
+                max-width: 437px
+                margin: 6px auto 43px
+                justify-content: space-between
+                .btn
+                    &_type_input, &_type_button
+                        display: block
+                        max-width: 200px
+                        font-size: 20px
+                        text-transform: uppercase
+                        letter-spacing: 2px
+                        text-align: center
+
+.block-features        
+    &__container    
+        padding: 0 32px 77px
+    .heading
+        &_block_features
+            padding: 25px 0 44px
+
+.features-grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: max-content
+    grid-gap: 30px
+    &__item
+        padding: 20px 0 30px
+        text-align: center
+    &__icon
+        width: 108px
+        height: 108px
+        margin: 0 auto
+        &_instagram
+            background: url(../img/icon-paper.svg) center/cover no-repeat
+        &_orders
+            background: url(../img/icon-box.svg) center/contain no-repeat
+        &_gifts
+            background: url(../img/icon-consist.svg) center/contain no-repeat
+    &__description
+        max-width: 190px
+        padding: 26px 0 10px
+        margin: 0 auto
+        font-size: 24px
+        font-weight: bold
+        span
+            display: block
+            font-family: $fontSladkoeshka
+            font-size: 6rem
+            color: $mainHeadingColor
+
+.block-goods
+    &_page_gift_sets
+        .heading
+            &_block_goods
+                margin-bottom: 31px
+
+.block-products
+    &_page_gift_sets
+        .heading
+            &_block_products
+                margin: 8px 0
+        .block-products__container
+            padding-bottom: 91px
+
+main
+    .bg-cloud
+        &-1
+            &_page_gift_sets
+                top: 8%
+        &-2
+            &_page_gift_sets
+                top: 7%
+        &-3
+            &_page_gift_sets
+                top: 38%
+        &-4
+            &_page_gift_sets
+                top: 32%
+        &-8
+            &_page_gift_sets
+                top: 67%
+        &-9
+            &_page_gift_sets
+                top: 83%

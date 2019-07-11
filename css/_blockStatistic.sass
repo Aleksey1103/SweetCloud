@@ -1,0 +1,39 @@
+.block-statistic        
+    &__container    
+        padding: 0 32px 73px
+    .heading
+        &_block_statistic
+            padding: 25px 0 44px
+
+.statistic-grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: max-content
+    grid-gap: 30px
+    &__item
+        background-color: $colorWhite
+        padding: 40px 0 30px
+        text-align: center
+        box-shadow: 0 4px 43px $shadowColorOpacity1
+    &__icon
+        width: 80px
+        height: 80px
+        margin: 0 auto
+        &_instagram
+            background: url(../img/instagram-icon.svg) center/cover no-repeat
+        &_orders
+            background: url(../img/package-icon.svg) center/contain no-repeat
+        &_gifts
+            background: url(../img/gift-icon.svg) center/contain no-repeat
+    &__description
+        max-width: 170px
+        padding: 18px 0 10px
+        margin: 0 auto
+        font-size: 24px
+        font-weight: bold
+        span
+            display: block
+            font-family: $fontSladkoeshka
+            font-size: 60px
+            font-weight: normal
+            color: $mainHeadingColor

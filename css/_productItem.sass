@@ -1,0 +1,273 @@
+.block-presentation
+    &-grid
+        display: grid
+        grid-template-columns: auto auto max-content
+        grid-template-rows: repeat(4, auto)
+        grid-template-areas: "a b c" "a b d" "a b e" "f f f"
+        grid-column-gap: 30px
+        box-sizing: border-box
+        padding: 30px 32px 0
+        &__item
+            align-items: center
+            justify-content: center
+            &_1
+                grid-area: a
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                padding-left: 15px 
+            &_2
+                grid-area: b              
+            &_3
+                grid-area: c
+            &_4
+                grid-area: d
+            &_5
+                grid-area: e
+            &_6
+                grid-area: f
+        form
+            width: 100%
+        &__pic, &__video
+            position: relative
+            box-sizing: border-box
+            width: 140px
+            height: 140px
+            border: 3px solid $btnBorderColor
+            border-radius: 10px
+            overflow: hidden
+            img
+                position: absolute
+                top: 50%
+                left: 50%
+                width: 100%
+                height: 100%
+                transform: translate(-50%, -50%)
+                object-fit: cover
+                z-index: -1
+        &__btn
+            position: absolute
+            display: block
+            box-sizing: border-box
+            width: 100%
+            height: 100%
+            border: none
+            border-radius: 7px
+            background: rgba(255, 255, 255, .7) url(../img/btn-play.svg) center/(79/112*100%) (58/112*100%) no-repeat
+            transition: background-size .2s
+            &:hover
+                background-size: 85px 62px
+        &__image
+            position: relative
+            box-sizing: border-box
+            width: 424px
+            height: 443px
+            border: 3px solid $btnBorderColor
+            border-radius: 10px
+            overflow: hidden
+            img
+                position: absolute
+                top: 50%
+                left: 50%
+                width: 100%
+                height: 100%
+                transform: translate(-50%, -50%)
+                object-fit: cover
+                z-index: -1
+            &::before
+                content: ''
+                position: absolute
+                top: -44.24%
+                left: -44.34%
+                width: 188.68%
+                height: 125.51%
+                background-color: $itemsBgColor
+                border-radius: 100%
+                z-index: -1
+        &__name
+            font-size: 24px
+            max-width: 220px
+        &__availability
+            font-size: 14px
+            color: $mainHeadingColor
+            padding: 10px 0 21px
+        &__info
+            display: flex
+            align-items: center
+            margin-bottom: 18px
+            b
+                margin-right: 4px           
+            &::before
+                content: ''
+                display: block
+                width: 30px
+                height: 30px
+                margin-right: 10px
+            &:nth-child(2)
+                &::before
+                    background: url(../img/icon-weight.svg) center/cover no-repeat
+            &:nth-child(3)
+                &::before
+                    background: url(../img/icon-flag.svg) center/cover no-repeat
+            &:nth-child(4)
+                margin-bottom: 13px
+                &::before
+                    background: url(../img/icon-cost.svg) center/cover no-repeat
+        &__numberof
+            display: flex
+            align-items: center
+            .block-presentation-grid__info
+                margin-bottom: 0
+                b
+                    margin-right: 8px
+                &::before
+                    background: url(../img/icon-quantity.svg) center/cover no-repeat
+            
+        .btn
+            &_type_input, &_type_button
+                display: block
+                max-width: 200px
+                margin: 38px auto 0
+                font-size: 20px
+                text-transform: uppercase
+                letter-spacing: 2px
+                text-align: center
+
+    &-description
+        box-sizing: border-box
+        padding: 50px 55px 30px 91px
+        font-size: 18px
+        text-align: center
+        line-height: 21px
+        max-width: 906px
+    
+
+.block-quantity
+    position: relative
+    display: flex
+    align-items: center
+    input
+        width: 56px
+        height: 40px
+        margin: 0 10px
+        text-align: center
+        font-size: 18px
+        color: $commonTextColor
+        font-weight: bold
+        border: none
+        background: url(../img/quantity-cloud-bg.svg) center/cover no-repeat
+    &__btn
+        position: relative
+        display: block
+        box-sizing: border-box
+        width: 30px
+        height: 30px
+        border: 2px solid $plusMinusBtnColor
+        border-radius: 50%
+        color: $mainPinkColor
+        transition: background-color, color .3s
+        z-index: 0
+        &:hover
+            background-color: $plusMinusBtnColor
+            color: $colorWhite
+        &:first-of-type
+            &::before
+                content: ''
+                position: absolute
+                width: 15px
+                height: 2px
+                background-color: $plusMinusBtnColor
+                font-size: 50px
+                top: 11.5px
+                left: 4.5px
+                z-index: 1
+            &:hover
+                &::before
+                    background-color: $colorWhite
+        &:last-of-type
+            &::before
+                content: '+'
+                position: absolute
+                font-size: 30px
+                top: -5.5px
+                left: 3.5px
+
+.block-goods
+    &_page_product-item
+        .heading
+            &_block_goods
+                margin-bottom: 31px
+
+.block-products
+    &_page_product-item
+        .heading
+            &_block_products
+                margin-bottom: 5px
+        .block-products__container
+            padding-bottom: 13px
+
+.block-categories
+    &_page_product-item
+        .block-categories__container
+            padding-bottom: 56px
+
+main
+    .bg-cloud
+        &-1
+            &_page_product-item
+                top: 5%
+        &-2
+            &_page_product-item
+                top: 3%
+        &-3
+            &_page_product-item
+                top: 22%
+        &-4
+            &_page_product-item
+                top: 49%
+
+.modal-container
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-color: rgba(0, 0, 0, .9)
+    z-index: 100
+    &__btn-close
+        position: absolute
+        top: 30px
+        right: 30px
+        background-color: transparent
+        border: none
+        font-size: 40px
+        color: $colorWhite
+        opacity: .7
+        transition: .3s
+        &:hover
+            opacity: 1
+    &__img
+        display: none
+        position: relative
+        width: 40vw
+        height: 40vw
+        margin: 5% auto 0
+        overflow: hidden
+        img
+            position: absolute
+            width: 100%
+            height: 100%
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            object-fit: cover
+    &__video
+        display: none
+        width: 55vw
+        height: 40vw
+        margin: 5% auto 0
+        iframe
+            width: 100%
+            height: 100%
+        

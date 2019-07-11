@@ -1,0 +1,1231 @@
+@media (max-width: 1600px)
+    main
+        .bg-cloud
+            &-3, &-4, &-5, &-6, &-9
+                width: calc(50% - 515px)
+
+    .modal-container
+        &__img
+            width: 60vw
+            max-width: 700px
+            height: 60vw
+            max-height: 700px
+        &__video
+            width: 80vw
+            max-width: 935px
+            height: 60vw
+            max-height: 700px
+
+@media (max-width: 1480px)
+    main
+        .bg-cloud
+            &-1, &-7, &-8
+                width: calc(50% - 515px)
+    
+    .banner
+        padding-top: 200px
+
+@media (max-width: 1280px)
+    html
+        font-size: 9px
+    main
+        .bg-cloud
+            &-1, &-2, &-7, &-8
+                display: none
+            &-3, &-4, &-5, &-6, &-9
+                display: none
+
+    .block-gifts
+        &__container
+            width: calc(100% - 110px)
+            margin: 0 auto
+
+    .block-review
+        .center
+            display: flex
+            flex-wrap: wrap
+            position: relative
+            height: max-content
+            width: calc(100% - 110px)
+            max-width: 970px
+            #b, #c, #d-center, #e, #f, .b, .c, .d, .e, .f
+                position: relative
+                display: grid    
+                grid-template-columns: auto
+                grid-template-rows: repeat(2, max-content) minmax(135px, auto) max-content
+                margin:  24px
+                box-shadow: 0 4px 43px $shadowColorOpacity2
+                background-color: $colorWhite
+                top: 0
+                left: 0
+                width: 100%
+                max-width: 438px
+                opacity: 1
+                z-index: 3
+                span[class^="winner__photo"]
+                    height: 87px
+                    .avatar
+                        top: -24px         
+                        left: calc(50% - 48.5px)
+                        width: 97px
+                        height: 97px
+                h3[class^="winner__name"]
+                    font-size: 16px
+                    padding-bottom: 31px
+                    letter-spacing: 0.05px
+                p[class^="winner-txt"]
+                    max-height: none
+                    padding: 0 25px
+                    font-size: 16px
+                    line-height: 19px
+                span[class^="stars"]
+                    width: 154px
+                    height: 22px
+                    margin-bottom: 14px
+                    margin-top: 21px
+            .slick-prev, .slick-next
+                position: absolute
+                top: 33%
+                height: max-content
+                align-self: center
+                border: none
+                background-color: transparent
+                padding: 0
+                svg
+                    width: 35px
+                    height: 60px
+                    transition: .3s
+                    &:hover
+                        fill: $mainPinkColor
+            .slick-prev
+                left: -35px
+            .slick-next
+                right: -35px
+            .slick-dots
+                display: flex
+                flex-basis: 100%
+                justify-content: center
+                margin: 26px 0 50px
+                button
+                    display: block
+                    box-sizing: border-box
+                    padding: 5px
+                    background-color: transparent
+                    font-size: 0px
+                    color: transpatent
+                    margin: 0 5px
+                    border-radius: 50%
+                    border: solid 2px $dotsColor
+                    &:hover
+                        background-color: $dotsColor
+                .slick-active
+                    button
+                        background-color: $dotsColor
+        .radio-wrapper
+            display: none
+@media (max-width: 1080px)
+    .nav
+        box-sizing: border-box
+        padding-right: 25px
+        padding-left: 25px
+
+    .banner
+        padding-top: 160px
+
+    .product-list
+        grid-template-columns: repeat(3, 203px)
+        max-width: max-content
+        margin: 0 auto
+
+    .categories-grid
+        grid-template-columns: 1fr 1.5fr
+        grid-template-rows: repeat(3, 204px)
+        grid-template-areas: "a b" "a c" "d d"
+        margin: 0 45px
+        &__item
+            &_novelty
+                background-position-y: bottom
+            &_image
+                background-position-x: calc(100% + 57px)
+            &_giftsets
+                background-position: top left
+
+    .block-gifts
+        &__item
+            img
+                width: 55%
+        &__container
+            .slick-prev
+                margin-left: 20px
+            .slick-next
+                margin-right: 20px
+
+    .footer-links
+        &__container
+            padding: 0 25px
+        &-menu
+            column-gap: 10px
+
+    .breadcrumbs
+        box-sizing: border-box
+        padding-left: 25px
+
+    .block-goods
+        &_page_gift_sets, &_page_product-item
+            .product-list
+                display: flex
+                width: 733px
+                padding: 0 32px
+                &-item
+                    max-width: 203px
+                    margin: 0 10px
+                .slick-prev, .slick-next
+                    position: absolute
+                    top: calc(50% - 30px)
+                    height: max-content
+                    align-self: center
+                    border: none
+                    background-color: transparent
+                    padding: 0
+                    svg
+                        width: 35px
+                        height: 60px
+                        transition: .3s
+                        &:hover
+                            fill: $mainPinkColor
+                .slick-prev
+                    left: -45px
+                .slick-next
+                    right: -45px
+
+    .block-products
+        &_page_gift_sets, &_page_product-item
+            .product-list
+                display: flex
+                width: 733px
+                &-item
+                    max-width: 203px
+                    margin: 0 10px
+                .slick-prev, .slick-next
+                    position: absolute
+                    top: calc(50% - 30px)
+                    height: max-content
+                    align-self: center
+                    border: none
+                    background-color: transparent
+                    padding: 0
+                    svg
+                        width: 35px
+                        height: 60px
+                        transition: .3s
+                        &:hover
+                            fill: $mainPinkColor
+                .slick-prev
+                    left: -45px
+                .slick-next
+                    right: -45px
+
+    .block-sales
+        &__container
+            margin: 0 25px
+
+    .block-about
+        &__container
+            margin-left: 25px
+            margin-right: 25px
+
+    .block-payment
+        margin: 0 25px
+
+    .block-delivery
+        &__container
+            margin: 0 25px
+
+    .block-basket
+        &__container
+            margin: 0 25px
+
+    .block-order
+        &__container
+            margin: 0 25px
+        &-grid
+            grid-template-columns: 1fr 2fr
+            grid-gap: 25px
+
+@media (max-width: 970px)
+    .nav
+        &_header-top
+            grid-template-columns: 110px auto 194px auto 110px
+            padding-top: 10px   
+            .menu-list
+                &__item
+                    display: none         
+        &_header-bottom
+            position: relative
+            grid-template-columns: 46px auto 110px
+            grid-template-rows: 80px
+            .logo
+                position: absolute
+                left: calc(50vw - 41.5px)
+                top: calc(50% - 30px)
+                z-index: 1
+                &_container
+                    margin: 0
+            .menu-list
+                &__item
+                    display: none
+                .search-container
+                    z-index: 2
+        &_footer
+            padding: 17px 25px
+            .menu-list
+                &__item
+                    display: none
+
+    .modal-btn
+        display: block
+
+    .modal-menu    
+        .menu-list
+            &__item
+                position: relative
+                padding: 15px 0
+                z-index: 1
+                &.dropdown-active
+                    z-index: 2
+                .dropdown-menu
+                    border-top-width: 15px
+                        
+    .block-gifts
+        &__container
+            max-width: 486px
+            margin: 0 auto
+            .slick-prev, .slick-next
+                position: absolute
+                top: 50%
+            .slick-prev
+                left: -70px
+                margin-left: 0
+            .slick-next
+                right: -70px
+                margin-right: 0
+        &__item
+            img
+                width: 100%
+
+    .block-review
+        .center
+            max-width: 486px
+            .slick-prev
+                left: -70px
+            .slick-next
+                right: -70px
+
+    .footer-links
+        &__container
+            grid-template-columns: 1fr 1fr
+        &-instagram
+            &__container
+                width: 400px
+                background-size: cover
+
+    .basket-grid
+        grid-template-columns: 1fr
+        max-width: 600px
+        margin: 0 auto
+        &-item
+            &__info
+                width: max-content
+                margin: 0 auto
+            &__amount
+                width: max-content
+                padding-right: 85px
+
+    .block-order
+        &-grid
+            grid-template-columns: 1fr
+            max-width: 700px
+            margin: 0 auto
+            &__person-data
+                max-width: 80%
+                margin: 0 auto
+            &__container
+                justify-content: space-around
+        &__container
+            .btn
+                &_type_input
+                    margin-top: 30px
+
+    .grid-container
+        grid-template-columns: max-content max-content
+        grid-template-rows: 1fr 1fr
+        justify-content: space-around
+        grid-row-gap: 10px
+        &__item
+            &:nth-child(2)
+                grid-column: 1/3
+                grid-row: 1/2
+                justify-self: center
+
+    .block-delivery
+        &__container
+            padding-bottom: 70px
+
+    .block-presentation
+        &-grid
+            grid-template-columns: auto auto
+            grid-template-rows: repeat(5, auto)
+            grid-template-areas: "a a" "b c" "b d" "b e" "f f"
+            grid-column-gap: 0
+            &__item
+                &_1
+                    flex-direction: row
+                    padding: 0 0 30px 0
+                    justify-content: space-around
+                &_2
+                    margin: 0 auto
+
+    .modal-container
+        &__img
+            width: 60vw
+            height: 60vw
+        &__video
+            width: 80vw
+            height: 60vw
+        &__btn-close
+            top: 15px
+            right: 15px
+
+@media (max-width: 900px)
+    .nav
+        &_header-top
+            grid-template-columns: 46px 0 auto 110px
+            .menu-list
+                position: relative
+                &__item
+                    display: none
+                .search-container
+                    z-index: 2
+            .main-logo
+                position: absolute
+                top: calc(50% - 23px)
+                left: calc(50vw - 41.5px)
+                height: 100%
+                z-index: 1
+                &__container
+                    background-image: url(../img/logo.svg)
+                    width: 83px
+                    height: 60px
+
+    .statistic-grid
+        grid-template-columns: repeat(2, 1fr)
+        &__item
+            &:nth-child(3)
+                grid-column: 1/3
+                width: 48%
+                justify-self: center
+
+    .block-goods
+        &_page_gift_sets, &_page_product-item
+            .product-list
+                width: 510px
+
+    .block-products
+        &_page_gift_sets, &_page_product-item
+            .product-list
+                width: 510px
+
+    .block-sales
+        &-grid
+            grid-template-columns: 1fr
+            max-width: 600px
+            margin: 0 auto
+            &__description
+                max-width: none
+
+    .block-contacts
+        &-grid
+            grid-template-columns: 1fr
+        &-social
+            width: 100%
+            max-width: 600px
+            justify-self: center
+        &-form
+            max-width: 600px
+            justify-self: center
+        .heading
+            &_block_contacts
+                text-align: center
+
+    .basket-submit
+        flex-direction: column
+        align-items: center
+        &__links
+            margin-top: 30px
+            width: 100%
+            justify-content: space-around
+
+@media (max-width: 800px)
+    .banner
+        background-image: none
+        background-color: $colorWhite        
+        padding: 36px 0 7px
+
+    .block-goods
+        &__container
+            .product-list
+                grid-template-columns: repeat(2, 203px)
+
+    .categories-grid
+        grid-template-columns: 1fr 1fr
+
+    .statistic-grid
+        grid-template-columns: 1fr
+        max-width: 500px
+        padding: 0 20px
+        margin: 0 auto
+        &__item
+            &:nth-child(3)
+                grid-column: 1/1
+                width: 100%
+
+    .block-gifts
+        &__container
+            .slick-prev
+                left: -40px
+            .slick-next
+                right: -40px
+        &__item
+            img
+                width: 80%
+
+    .block-review
+        .center
+            .slick-prev
+                left: -40px
+            .slick-next
+                right: -40px
+
+    .footer-links
+        &__container
+            grid-template-columns: 1fr
+            grid-template-rows: auto auto
+        &-menu
+            column-count: 3
+            text-align: center
+        &__item
+            padding: 7px 0
+        &-instagram
+            &__heading
+                padding: 9px 0 12px
+            &__container
+                width: 558px
+
+    .block-about
+        &__container
+            background: url(../img/block-about_bg_left.png) bottom left/100px no-repeat, url(../img/block-about_bg_right.png) bottom right/150px no-repeat
+        &__info
+            padding: 44px 80px 55px 90px
+
+    .block-presentation
+        &-grid
+            grid-template-columns: 1.5fr 1fr
+            grid-column-gap: 10px
+            padding: 30px 25px 0
+            &__image
+                width: 424px*0.8
+                height: 443px*0.8
+
+@media (max-width: 768px)
+    .categories-grid
+        &__item
+            &_image
+                a
+                    img
+                        display: none
+
+    .product-list
+        grid-template-columns: repeat(2, 203px)
+
+    .block-features
+        &__container
+            padding-bottom: 32px
+
+    .features-grid
+        grid-template-columns: repeat(2, 1fr)
+        &__item
+            &:nth-child(3)
+                grid-column: 1/3
+
+@media (max-width: 680px)
+    html
+        font-size: 8px
+
+    .categories-grid
+        margin: 0 35px
+        &__item
+            &_giftsets
+                img
+                    width: 280px
+                    right: -34px
+
+    .block-gifts
+        &_page_gift_sets
+            .heading
+                &_block_gifts
+                    padding: 30px 0
+        &__container
+            .slick-prev, .slick-next
+                svg
+                    width: 29px
+                    height: 50px
+
+    .block-review
+        .center
+            .slick-prev, .slick-next
+                svg
+                    width: 29px
+                    height: 50px
+
+    .block-goods
+        &_page_gift_sets, &_page_product-item
+            .product-list               
+                .slick-prev, .slick-next                  
+                    svg
+                        width: 29px
+                        height: 50px 
+
+    .block-products
+        &_page_gift_sets, &_page_product-item
+            .product-list
+                .slick-prev, .slick-next                   
+                    svg
+                        width: 29px
+                        height: 50px
+
+    .footer-links
+        &-instagram
+            &__container
+                width: 500px
+
+    .grid-container
+        grid-template-columns: max-content
+        grid-template-rows: auto repeat(2, minmax(208px, auto))
+        grid-gap: 20px
+        &__item            
+            &:nth-child(2)
+                grid-column: 1/1
+        &__info
+            max-width: 330px
+
+    .block-payment
+        .grid-container
+            &__item
+                &:not(:nth-child(2))
+                    padding: 0
+
+    .block-order
+        &__container
+            .btn
+                &_type_input
+                    margin-top: 0
+        &-grid
+            &__container
+                flex-direction: column
+                width: 100%
+                max-width: 350px
+                margin: 0 auto
+
+    .block-goods
+        &_page_gift_sets, &_page_product-item
+            .product-list
+                width: 287px
+
+    .block-products
+        &_page_gift_sets, &_page_product-item
+            .product-list
+                width: 287px
+
+    .block-presentation
+        &-grid
+            grid-template-columns: repeat(1, minmax(auto, 424px))
+            grid-template-rows: repeat(6, auto)
+            grid-template-areas: "c" "b" "a" "d" "f" "e"
+            grid-row-gap: 20px
+            max-width: max-content
+            margin: 0 auto
+            padding-bottom: 30px
+            &__item
+                &_1
+                    padding: 0
+            &__name
+                text-align: center
+                max-width: 100%
+            &__image
+                width: 424px
+                height: 443px
+                margin: 0 auto
+            &__pic, &__video
+                width: 140px*0.8
+                height: 140px*0.8
+            &__availability
+                text-align: center
+            .btn
+                &_type_input
+                    &:first-child
+                        margin-top: 0
+        &-description
+            padding: 0
+
+@media (max-width: 600px)
+    .nav
+        padding-left: 20px
+        padding-right: 20px
+        &_header
+            &-top
+                grid-template-columns: 46px 0 auto 96px
+                grid-template-rows: 73px
+                padding: 0 20px
+                .main-logo
+                    top: calc(50% - 30px)
+                    left: calc(50% - 41.5px)
+            &-bottom
+                grid-template-columns: 46px auto 96px
+                grid-template-rows: 73px
+                .logo
+                    left: calc(50vw - 60px)
+        &_footer
+            padding: 2px 20px
+            .logo
+                &_container
+                    margin-left: 0
+
+    .modal-menu
+        .nav
+            .logo
+                &_container
+                    margin: 6.5px auto
+    .breadcrumbs
+        padding-left: 20px
+
+    .footer-links
+        &__container
+            padding: 0 20px
+        &-menu
+            column-count: 2
+            text-align: left
+            padding-left: 0
+        &-instagram
+            &__container
+                width: calc(100vw - 40px)
+
+    .block-goods
+        &__menu
+            flex-direction: column
+            align-items: center
+            padding: 15px 0
+            .btn
+                &_type_li
+                    margin: 9px 0
+                    max-width: 50vw
+        .product-list
+            grid-template-columns: 203px
+            grid-template-rows: auto
+            padding: 0
+            width: 218px
+            &.novelty
+                display: none
+            &.sale
+                display: none
+            &-item
+                margin: 0 7.5px             
+            .slick-arrow
+                position: absolute
+                top: calc(50% - 30px)
+                height: max-content
+                align-self: center
+                border: none
+                background-color: transparent
+                padding: 0
+                svg
+                    width: 23px
+                    height: 40px
+            .slick-prev
+                left: -90px
+            .slick-next
+                right: -90px
+
+    .block-products
+        &_page_gift_sets, &_page_product-item
+            .product-list
+                width: 218px
+                padding: 0
+                &-item
+                    margin: 0 7.5px
+                .slick-prev
+                    left: -90px
+                .slick-next
+                    right: -90px
+
+    .categories-grid
+        grid-template-columns: minmax(auto, 400px)
+        grid-template-rows: 442px repeat(2, 204px)
+        grid-template-areas: "a" "b" "d"
+        grid-gap: 10px
+        max-width: max-content
+        margin: 0 auto
+        &__item
+            .heading
+                font-size: 60px
+            &_image
+                display: none
+            &_giftsets
+                img
+                    display: none
+
+    .block-gifts
+        &_page_gift_sets
+            .heading
+                &_block_gifts
+                    padding: 15px 0
+            .block-gifts
+                &__container
+                    padding-bottom: 0
+                &__description
+                    padding: 0 20px 32px
+                    max-width: 400px
+                    margin: 0 auto
+        &__container
+            width: 68.75vw
+            padding-bottom: 0
+            .slick-prev, .slick-next
+                top: 30%
+                svg
+                    width: 23px
+                    height: 40px
+            .slick-prev
+                left: -9.375vw
+            .slick-next
+                right: -9.375vw
+        &__item
+            img
+                width: 100%
+                max-width: 380px
+        &-link
+            padding: 0 0 95px
+            &__container
+                width: 87.5vw
+                padding: 6px 0
+                text-align: center
+                .choose-set
+                .min-cost
+                    top: auto
+                    bottom: -70px
+                    left: calc(50% - 80px)
+
+    .block-review
+        .center
+            width: 68.75vw
+            #b, #c, #d-center, #e, #f, .b, .c, .d, .e, .f
+                margin: 24px 0 0 0
+                box-shadow: none
+                p[class^="winner-txt"]
+                    padding: 0 5px
+            .slick-prev, .slick-next
+                top: 42%
+                svg
+                    width: 23px
+                    height: 40px
+            .slick-prev
+                left: -9.375vw
+            .slick-next
+                right: -9.375vw
+
+    .block-goods
+        &_page_gift_sets, &_page_product-item
+            .product-list               
+                .slick-prev, .slick-next                  
+                    svg
+                        width: 23px
+                        height: 40px 
+
+    .block-products
+        &_page_gift_sets, &_page_product-item
+            .product-list
+                .slick-prev, .slick-next                   
+                    svg
+                        width: 23px
+                        height: 40px
+
+    .product-list
+        &_page_products
+            padding: 0 20px
+            grid-gap: 20px
+
+    .block-basket
+        &__container
+            padding-bottom: 40px
+
+    .basket-grid
+        max-width: max-content
+        &-item
+            grid-template-columns: max-content
+            grid-template-rows: auto
+            padding: 0 30px 30px
+            &__img
+                padding: 0
+                justify-self: center
+
+    .basket-submit
+        &__links
+            flex-direction: column
+            align-items: center
+            .btn
+                &_type_a
+                    margin-bottom: 32px
+
+    .block-order
+        &-info
+            flex-direction: column
+        .basket-submit
+            &__payment
+                align-self: center
+                margin-bottom: 23px
+
+@media (max-width: 500px)
+    html
+        font-size: 7px
+
+    .banner
+        display: none
+
+    .breadcrumbs
+        display: flex
+        flex-wrap: wrap
+        &__item
+            a
+                word-break: keep-all
+                line-height: 18px
+
+    .block-categories
+        &_page-sales
+            display: none
+        .heading
+            &_block_categories
+                padding: 5px 0 12px
+        &__container
+            padding-bottom: 51px
+
+    .block-statistic
+        .heading
+            &_block_statistic
+                padding: 13px 0 0
+        &__container
+            padding: 0 0 20px
+
+    .statistic-grid
+        grid-gap: 20px
+        &__item
+            padding: 22px 0 0px
+            box-shadow: none
+
+    .block-gifts
+        .heading
+            &_block_gifts
+                padding: 23px 0 38px
+        &_page_gift_sets
+            .heading
+                &_block_gifts
+                    padding: 13px 0
+            .block-gifts
+                &__name
+                    b
+                        display: block
+                &__info
+                    margin: 21px 0 14px
+                &__buttons
+                    flex-direction: column
+                    align-items: center
+                    margin: 0 auto
+                    .btn
+                        &_type_input
+                            margin-bottom: 30px
+
+    .block-review
+        .heading
+            &_block_review
+                padding: 33px 0 48px
+        .center
+            .slick-dots
+                margin: 52px 0 54px
+
+    .block-features
+        .heading
+            &_block_features
+                padding: 46px 0 6px
+        &__container
+            padding-bottom: 10px
+    
+    .features-grid
+        grid-template-columns: 1fr
+        grid-gap: 0
+        &__item
+            padding: 20px 0 19px
+            &:nth-child(3)
+                grid-column: 1/1
+
+    .block-goods
+        &_page_gift_sets
+            .heading
+                &_block_goods
+                    margin-bottom: 19px    
+        .product-list
+            .slick-prev
+                left: calc(-43.75vw + 109px)
+            .slick-next
+                right: calc(-43.75vw + 109px)
+
+    .block-products
+        &_page_gift_sets
+            .heading
+                &_block_products
+                    max-width: 200px
+                    margin: 0 auto
+            .block-products
+                &__container
+                    padding: 17px 0 52px
+        &_page_gift_sets, &_page_product-item
+            .product-list
+                .slick-prev
+                    left: calc(-43.75vw + 109px)
+                .slick-next
+                    right: calc(-43.75vw + 109px)
+
+    .product-list
+        &_page_products
+            grid-template-columns: 203px
+            grid-gap: 30px
+
+    .block-products
+        &__container
+            padding: 24px 0 63px
+        &__menu
+            max-width: 200px
+            flex-wrap: wrap
+            margin: 0 auto
+            padding-bottom: 43px
+            .btn
+                margin-bottom: 14px
+
+    .block-sales
+        &__container
+            padding-bottom: 45px
+        &-grid
+            max-width: max-content
+            grid-gap: 25px
+            &__item
+                padding: 0
+                border: none
+                grid-template-columns: min-content
+            &__text
+                padding: 0 0 0 5px
+            &__date
+                padding: 15px 0
+                text-align: center
+            &__link
+                padding: 21px 0 10px
+                .btn
+                    &_type_a
+                        margin: 0 auto
+
+    .block-about
+        .heading
+            &_block_about
+                padding-top: 22px
+        &__container
+            background: none
+            border: none
+            margin: 0 auto 20px
+            max-width: 400px
+        &__info
+            padding: 0 20px
+        &+.block-statistic
+            .block-statistic__container
+                padding-bottom: 48px
+
+    .block-contacts
+        .heading
+            &_block_contacts
+                padding-bottom: 16px
+        &__container
+            padding: 5px 0 64px
+        &-grid
+            padding: 0 20px
+            grid-gap: 24px
+        &-social
+            &__list
+                li
+                    padding-left: 50px
+                    &::before
+                        width: 35px
+                        height: 35px
+            &__item
+                padding: 5px 12px
+                margin-bottom: 13px
+                font-size: 16px
+                font-weight: 500
+                letter-spacing: -0.8px
+                border-radius: 10px
+        &-form
+            form
+                input:not(:last-child), textarea
+                    font-size: 14px
+                    padding: 5px 14px
+                    margin-bottom: 14px
+                textarea
+                    height: 63px
+                    margin-bottom: 33px
+
+    .grid-container
+        grid-template-rows: auto
+        grid-gap: 0
+        &__payment-pic
+            width: 280px
+            height: 230px
+        &__delivery-pic
+            width: 270px
+        &__info
+            border: none
+        &__percent
+            padding: 7px 0 10px
+        &__description
+            padding: 0 15px 20px 15px
+            text-align: center
+            letter-spacing: -0.4px
+
+    .block-payment
+        .heading
+            &_block_payment
+                padding: 30px 0 0
+
+    .block-delivery
+        .heading
+            &_block_delivery
+                padding: 26px 0 12px
+        &__container
+            padding-bottom: 27px
+
+    .block-basket
+        .heading
+            &_block_basket
+                padding-bottom: 0
+        &__container
+            padding-bottom: 24px
+            margin: 0 20px
+
+    .basket-grid
+        grid-gap: 36px
+        padding: 0
+        &-item
+            padding: 0
+            border: none         
+            &__amount
+                padding-bottom: 3px
+
+    .basket-submit
+        border: none
+        padding-top: 47px
+        &__links
+            margin-top: 41px
+
+    .block-order
+        &__container
+            margin: 0 20px
+            padding-bottom: 52px
+        &-info
+            margin-bottom: 15px
+        &-grid
+            grid-gap: 0
+            &__person-data
+                margin: 0
+                max-width: 100%
+            &__payment
+                display: flex
+                flex-direction: column
+                flex-basis: 253px
+                .block-order-grid__text-input
+                    order: -1
+                    margin-bottom: 24px
+            &__delivery
+                flex-basis: 262px
+
+    .block-presentation
+        &-grid
+            grid-template-columns: calc(100vw - 40px)
+            padding: 15px 0
+            grid-row-gap: 17px
+            &__item
+                &_1
+                    width: 100%
+                    max-width: 424px
+                    margin: 0 auto
+                    justify-content: space-between
+                &_2
+                    width: 100%
+                &_5
+                    padding-top: 23px
+                    .btn
+                        &_type_button
+                            margin-top: 30px
+            &__name
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                span
+                    margin-left: 5px
+            &__image
+                width: 100%
+                max-width: 424px
+                height: calc(443/424 * (100vw - 40px))
+                max-height: 443px
+            &__pic, &__video
+                width: 25.625vw
+                max-width: 100px
+                height: 26.625vw
+                max-height: 100px
+            &__pic
+                &:first-child
+                    order: -2
+            &__video
+                order: -1
+            &__availability
+                padding: 2px 0 36px
+            &__info
+                margin-bottom: 22px
+        &-description
+            padding: 13px 0 0
+            font-size: 16px
+            line-height: 20px
+
+    .block-goods
+        &_page_product-item
+            .heading
+                &_block_goods
+                    margin: 26px 0 16px
+                   
+    .block-products
+        &_page_product-item
+            .heading
+                &_block_products
+                    margin: 3px 20px 0
+            .block-products
+                &__container
+                    padding: 15px 0 60px
+
+    .block-categories
+        &_page_product-item
+            display: none
+
+                   
+
+        

@@ -1,0 +1,81 @@
+.block-goods
+    position: relative
+    &__bg-cloud
+        &_1
+            position: absolute
+            width: 212px
+            height: 159px
+            top: 34%
+            left: 0
+            background: url(../img/block-goods-bg-cloud-1.png) center/cover no-repeat
+        &_2
+            position: absolute
+            width: 99px
+            height: 209px
+            top: 29%
+            right: 0
+            background: url(../img/block-goods-bg-cloud-2.png) center/cover no-repeat
+        &_3
+            position: absolute
+            width: 278px
+            height: 197px
+            bottom: -10%
+            right: 0
+            background: url(../img/block-goods-bg-cloud-3.png) center/cover no-repeat
+    &__menu
+        display: flex
+        justify-content: space-between
+        max-width: 500px
+        margin: 0 auto
+        padding: 29px 0
+    &__container
+        padding: 4px 32px 42px
+        
+.product-list
+    display: grid
+    grid-template-columns: repeat(4, 203px)
+    grid-gap: 30px       
+    &-item
+        &__inner
+            display: grid
+            position: relative            
+            grid-template-columns: 100%
+            grid-template-rows: max-content auto repeat(2, max-content)      
+            height: 100%
+            margin: 0 auto
+            border-radius: 10px
+            overflow: hidden
+            text-align: center
+            &::before
+                content: ''
+                position: absolute
+                top: -97px
+                left: -90px
+                width: 383px
+                height: 266px
+                background-color: $itemsBgColor
+                border-radius: 100%
+                z-index: -1
+        &__img            
+            display: block  
+            width: 203px
+            height: 192px            
+        &__name
+            display: block
+            align-self: start
+            padding: 0 15px            
+            color: $commonTextColor
+            strong
+                display: block
+        &__cost
+            padding-top: 9px
+            color: $mainPinkColor
+        .btn            
+            justify-self: center
+            margin-top: 10px
+
+.novelty, .sale
+    display: none
+
+
+

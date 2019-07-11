@@ -1,0 +1,181 @@
+html
+    font-size: 10px
+
+body
+    font-family: $fontMyriadPro
+    font-weight: normal
+    font-size: 16px
+    color: $commonTextColor
+
+h1, h2, h3, ul, p
+    margin: 0
+    padding: 0
+    
+ul
+    list-style-type: none
+
+*
+    outline: none
+
+a
+    text-decoration: none
+
+p, span, b, a
+    word-break: break-word
+
+.wrapper
+    max-width: 970px
+    margin: 0 auto
+
+.heading
+    font-family: $fontSladkoeshka
+    font-size: 6rem
+    font-weight: normal
+    text-align: center
+    color: $mainHeadingColor
+    .subheading
+        display: block
+        font-family: $fontMyriadPro
+        font-weight: bold
+        line-height: 50px
+        text-transform: lowercase
+        color: $mainPinkColor
+
+.btn
+    box-sizing: border-box
+    width: 100%
+    max-width: 160px
+    padding: 6px 0
+    border: 3px solid $btnBorderColor
+    border-radius: 30px
+    background-color: $colorWhite
+    cursor: default
+    font-family: $fontMyriadPro
+    font-weight: bold
+    letter-spacing: 1.5px
+    color: $mainPinkColor
+    transition: background-color, border-color, color .3s
+    &_type_li
+        text-align: center
+    &_type_a
+        display: block
+        text-align: center
+    &:hover, &_active
+        background-color: $mainPinkColor
+        border-color: $mainPinkColor
+        color: $colorWhite
+
+.dropdown-menu
+    position: absolute
+    display: none
+    top: 100%
+    left: 0
+    width: 265px
+    border-top: 22px solid transparent
+    z-index: 10
+    &__item
+        background: $commonTextColor
+        font-family: $fontMyriadPro
+        font-size: 16px
+        letter-spacing: 1.5px
+        transition: background-color .3s
+        &:last-child
+            display: block
+            height: 82px
+            padding: 0 
+            background: transparent url(../img/modal-menu-bg.svg) bottom center/cover no-repeat
+        a
+            display: block
+            padding: 12px 0 11px 17px
+            color: $dropMenuLinkColor
+            &:hover
+                background-color: $mainPinkColor
+
+main
+    position: relative
+    .bg-cloud
+        &-1
+            position: absolute
+            width: 212px
+            height: 159px
+            top: 7.5%
+            left: 0
+            background: url(../img/block-goods-bg-cloud-1.png) center right/cover no-repeat
+        &-2
+            position: absolute
+            width: 99px
+            height: 209px
+            top: 6.5%
+            right: 0
+            background: url(../img/block-goods-bg-cloud-2.png) center left/cover no-repeat
+        &-3
+            position: absolute
+            width: 278px
+            height: 197px
+            top: 19%
+            right: 0
+            background: url(../img/block-goods-bg-cloud-3.png) center left/cover no-repeat
+        &-4
+            position: absolute
+            width: 282px
+            height: 226px
+            top: 38%
+            left: 0
+            background: url(../img/block-statistic-bg-cloud-1.png) center right/cover no-repeat
+        &-5
+            position: absolute
+            width: 358px
+            height: 199px
+            top: 40%
+            right: 0
+            background: url(../img/block-statistic-bg-cloud-2.png) center left/cover no-repeat
+        &-6
+            position: absolute
+            width: 278px
+            height: 197px
+            top: 56%
+            right: 0
+            background: url(../img/block-goods-bg-cloud-3.png) center left/cover no-repeat
+        &-7
+            position: absolute
+            width: 250px
+            height: 223px
+            top: 79.5%
+            left: 0
+            background: url(../img/block-review-bg-cloud.png) center right/cover no-repeat
+        &-8
+            position: absolute
+            width: 209px
+            height: 159px
+            top: 0
+            right: 0
+            background: url(../img/bg-cloud-8.png) center left/cover no-repeat
+        &-9
+            position: absolute
+            width: 279px
+            height: 197px
+            top: 0
+            left: 0
+            background: url(../img/bg-cloud-9.png) center right/cover no-repeat
+
+
+.breadcrumbs
+    display: flex
+    font-size: 14px
+    padding-top: 28px
+    &__item
+        a
+            color: $commonTextColor
+        &_active
+            font-weight: bold
+            text-decoration: underline
+        &:not(:first-child)
+            padding-left: 4px
+
+.flex-container
+    display: flex
+    min-height: 100vh
+    flex-direction: column
+    justify-content: space-between    
+    main       
+        flex-grow: 1 

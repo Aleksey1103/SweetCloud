@@ -1,0 +1,103 @@
+.block-contacts    
+    &__container
+        padding-top: 15px
+        padding-bottom: 49px
+    .heading
+        &_block_contacts
+            font-size: 40px
+            text-align: left
+            padding: 0 0 28px
+    &-grid
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 50px
+        padding: 0 32px
+                
+    &-social
+        max-width: 390px        
+        &__list
+            li
+                position: relative
+                display: flex
+                padding-left: 70px
+                &::before
+                    position: absolute
+                    top: 0
+                    left: 0
+                    content: ''
+                    display: block
+                    width: 48px
+                    height: 48px
+                &:nth-child(1)
+                    &::before
+                        background: url(../img/contact-icon-phone.svg) center/cover no-repeat           
+                &:nth-child(2)
+                    &::before
+                        background: url(../img/contact-icon-letter.svg) center/cover no-repeat           
+                &:nth-child(3)
+                    &::before
+                        background: url(../img/contact-icon-facebook.svg) center/cover no-repeat           
+                &:nth-child(4)
+                    &::before
+                        background: url(../img/contact-icon-vk.svg) center/cover no-repeat           
+                &:nth-child(5)
+                    &::before
+                        background: url(../img/contact-icon-instagram.svg) center/cover no-repeat           
+        &__item
+            display: inline
+            padding: 10px 20px 10px 20px
+            margin-bottom: 17px
+            box-sizing: border-box
+            flex-basis: 100%
+            border: 3px solid $btnBorderColor
+            border-radius: 15px
+            font-size: 20px
+            font-weight: 500
+            color: $commonTextColor
+            transition: .3s
+            &:hover
+                background-color: $plusMinusBtnColor
+                border-color: $plusMinusBtnColor
+                color: $colorWhite
+
+    &-form
+        width: 100%
+        max-width: 390px
+        justify-self: end
+        form
+            display: flex
+            flex-direction: column
+            input:not(:last-child), textarea
+                padding: 10px 20px
+                margin-bottom: 17px  
+                border: 3px solid $btnBorderColor
+                border-radius: 15px
+                font-size: 20px
+                font-weight: 400
+                color: $commonTextColor
+                &::placeholder
+                    color: $placeholderColor
+            textarea
+                resize: none
+                height: 84px
+            .btn
+                &_type_input
+                    max-width: 195px
+                    margin: 3px auto 0
+                    padding: 9px 0
+                    font-size: 20px
+                    text-transform: uppercase
+
+main
+    .bg-cloud
+        &-1
+            &_page_contacts
+                top: 19%
+        &-2
+            &_page_contacts
+                top: 14%
+
+
+    
+        
+            

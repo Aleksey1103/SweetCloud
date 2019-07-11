@@ -1,0 +1,64 @@
+.block-gifts
+    background: url(../img/block-gifts-bg-img.png) center no-repeat
+    &_page_main
+        background-color: $blockBgBaigeColor
+    .heading
+        &_block_gifts
+            padding: 47px 0 61px
+    &__container
+        display: flex
+        width: 100%        
+        height: max-content
+        padding-bottom: 15px
+        .slick-prev, .slick-next
+            height: max-content
+            align-self: center
+            border: none
+            background-color: transparent
+            padding: 0
+            svg
+                width: 35px
+                height: 60px
+                transition: .3s
+                &:hover
+                    fill: $mainPinkColor
+    &__item
+        display: flex
+        flex-basis: 100%
+        justify-content: center
+        img
+            align-self: center
+            margin: 0 auto
+    &-link
+        padding: 4px 0 44px
+        &__container
+            position: relative
+            box-sizing: border-box
+            width: 100%
+            max-width: 375px
+            padding: 6px 180px 6px 22px
+            margin: 0 auto
+            border: 3px solid $btnBorderColor
+            border-radius: 30px
+            background-color: #fff
+            cursor: default
+            font-family: $fontMyriadPro
+            font-weight: bold
+            .choose-set
+                letter-spacing: 1.5px
+                color: $mainPinkColor
+            .min-cost
+                display: block
+                position: absolute
+                width: 100%
+                max-width: 155px
+                top: -4px
+                right: 0
+                border-radius: 30px
+                padding: 10px 0 
+                background-color: $mainPinkColor
+                border-color: $mainPinkColor
+                text-align: center
+                font-weight: normal
+                letter-spacing: 1.7px
+                color: $colorWhite

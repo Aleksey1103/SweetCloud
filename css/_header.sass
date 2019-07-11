@@ -1,0 +1,245 @@
+header
+    background-color: $bgColorBeige
+    margin: 0
+
+.nav
+    display: grid
+    &_header-top
+        position: relative    
+        grid-template-columns: calc(50% - 97px) 194px calc(50% - (97px + 110px)) 110px
+        grid-template-rows: 70px
+        padding-top: 17px        
+        z-index: 2
+    &_header-bottom
+        grid-template-columns: 110px auto 110px
+        grid-template-rows: max-content       
+    .menu-list
+        position: relative
+        display: flex
+        box-sizing: border-box
+        width: 100%
+        justify-content: space-between
+        align-items: center
+        font-family: $fontSladkoeshka            
+        font-size: 22px
+        &_top
+            &:nth-of-type(1)
+                padding: 0 3% 0 5.5%
+            &:nth-of-type(2)
+                background-color: $bgColorBeige
+                padding: 0 9% 0 10%
+        &_bottom
+            padding: 15px 3% 15px 5.5%
+            .dropdown-menu
+                border-top: 27px solid transparent
+        &__item
+            position: relative           
+            &::before
+                content: ''
+                position: absolute
+                top: calc(50% - 28px)
+                left: calc(50% - 50px)
+                width: 100px
+                height: 56px
+                background-image: url(../img/cloud.svg)
+                background-repeat: no-repeat
+                background-size: cover
+                background-position: center
+                opacity: 0
+                z-index: 0
+                transition: .3s
+            &:hover
+                &::before
+                    opacity: 1
+        &__link
+            position: relative //!!!!!!!!!!!!
+            display: block            
+            width: 104px
+            height: inherit           
+            text-align: center
+            letter-spacing: 2.2px
+            color: $mainPinkColor
+            z-index: 0            
+        
+.main-logo
+    position: relative   
+    &__container
+        position: absolute
+        height: 155px
+        top: 0
+        left: 0
+        right: 0
+        background-image: url(../img/main-logo.svg)
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: 0 center
+
+
+.block-action
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: $bgColorBeige
+
+.btn-search
+    width: 32px
+    height: 33px
+    background-color: transparent
+    border: none
+    background-image: url(../img/zoom-tool.png)
+    background-repeat: no-repeat
+    background-size: contain
+    cursor: pointer
+
+.search-container
+    position: absolute
+    top: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    box-sizing: border-box
+    width: 0
+    height: 100%
+    padding: 0
+    background-color: $bgColorBeige
+    &__field
+        width: 100%
+        height: 34px
+        padding: 0
+        border: 3px solid $btnBorderColor
+        border-radius: 12px
+        font-family: $fontMyriadPro
+        font-size: 16px
+        font-weight: 400
+        color: $commonTextColor
+    input[type='search']::-webkit-search-cancel-button 
+        position: relative
+        right: -5px    
+        -webkit-appearance: none
+        height: 12px
+        width: 12px
+        background: url(../img/btn-close.svg) center/cover no-repeat
+
+.btn-basket
+    display: block
+    position: relative
+    width: 46px
+    height: 37px
+    padding-right: 11px
+    background-color: transparent
+    border: none
+    background-image: url(../img/shopping-basket.png)
+    background-repeat: no-repeat
+    background-size: contain
+    .pink-circle
+        display: block
+        position: absolute
+        box-sizing: border-box
+        top: -12%
+        right: 0
+        width: 21px
+        height: 21px        
+        border-radius: 50%
+        background-color: #ff788c
+        font-size: 14px
+        color: #ffffff
+        text-align: center
+        padding: 2.5px 0
+
+.menu-pop-up
+    display: none
+    position: fixed
+    width: 100%
+    left: 0 
+    background-color: $bgColorBeige
+    box-shadow: 0 0 10px $mainHeadingColor
+    z-index: 10
+    .nav
+        grid-template-columns: 110px auto 110px
+        grid-template-rows: max-content       
+        width: 970px
+        margin: 0 auto
+        background-color: $bgColorBeige
+
+.banner
+    text-align: center
+    background-image: url(../img/header-banner.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    padding: 294px 0 36px
+
+.logo
+    align-self: center
+    &_container
+        display: block
+        width: 83px
+        height: 60px
+        background-image: url(../img/logo.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        margin-left: 16px
+
+.modal-menu
+    display: none
+    align-items: flex-start
+    position: absolute
+    bottom: 100%
+    left: 0
+    width: calc(100vw - 20px)
+    height: max-content
+    z-index: 10
+    .nav
+        width: 100%
+        grid-template-columns: auto
+        grid-template-rows: auto auto
+        grid-row-gap: 5px
+        padding: 0
+        box-shadow: 0 0 15px $shadowColorModalMenu
+        .logo
+            width: 100%
+            justify-self: center
+            background-color: $bgColorBeige
+            &_container
+                margin: 10px auto
+        .menu-list
+            flex-direction: column
+            align-items: center
+            background-color: $bgColorBeige
+            padding: 0
+            &__item
+                width: max-content
+                .dropdown-menu
+                    left: calc(50% - 132.5px)
+            &__link
+                width: auto
+            .search-container
+                display: none
+        .block-action
+            display: none
+
+.btn-close
+    display: none
+    cursor: pointer
+    width: 19px
+    height: 19px
+    padding: 0
+    margin: 68px 0 0 12px
+    border: none
+    background: transparent url(../img/modal-close-btn.svg) center/cover no-repeat
+    opacity: .5
+    transition: .3s
+    &:hover
+        opacity: 1
+.modal-btn
+    display: none
+    align-self: center
+    .btn-open
+        cursor: pointer
+        width: 46px
+        height: 35px
+        border: none
+        background: transparent url(../img/modal-icon.svg) center/cover no-repeat

@@ -1,0 +1,145 @@
+.block-order
+    &__container
+        text-align: center
+        padding-bottom: 65px
+        .btn
+            &_type_input
+                font-size: 18px
+                max-width: 190px
+                padding: 7px 0
+                margin-top: 18px
+    &-info
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        margin: 24px 0 36px
+    &__notice
+        font-size: 14px
+        color: $mainHeadingColor
+    &-grid
+        display: grid
+        grid-template-columns: 282px 626px       
+        grid-template-rows: max-content
+        justify-content: space-between
+        &__text-input, &__textarea
+            box-sizing: border-box
+            width: 100%
+            padding: 6px 18px
+            margin-bottom: 22px  
+            border: 3px solid $btnBorderColor
+            border-radius: 15px
+            font-size: 18px
+            font-weight: 400
+            color: $commonTextColor
+            &::placeholder
+                font-size: 18px
+                color: $placeholderColor
+            &:only-of-type
+                margin-bottom: 0
+        &__container
+            display: flex
+            justify-content: space-between
+        &__payment, &__delivery
+            flex-basis: 282px
+        &__heading
+            font-size: 18px            
+            margin-bottom: 16px
+            b
+                display: block
+        &__box
+            display: flex
+            justify-content: space-between
+            margin-bottom: 28px
+        &__inner
+            position: relative
+            flex-basis: 50%
+            max-width: 130px            
+            input[type="checkbox"]
+                display: none
+            p
+                padding: 10px 4px 0
+            .btn
+                display: block
+                width: 100%
+                &_payment
+                    padding: 5px 0
+                    font-size: 20px
+                    font-weight: 600
+                    color: $mainHeadingColor
+                    &:hover
+                        color: $colorWhite
+                    &.checked
+                        border-color: $mainPinkColor
+                        background-color: $mainPinkColor
+                        color: $colorWhite
+                &_delivery
+                    height: 39px
+                    &[for="post"]
+                        background: url(../img/post.svg) center/104px 28px no-repeat
+                        &:hover, &.checked
+                            background-color: $mainPinkColor
+                            background-image: url(../img/post_white.svg)
+                            border-color: $mainPinkColor
+                    &[for="newpost"]
+                        background: url(../img/newpost.svg) center/cover no-repeat
+                        background-size: 112px 21px
+                        &:hover, &.checked
+                            background-color: $mainPinkColor
+                            background-image: url(../img/newpost_white.svg)
+                            border-color: $mainPinkColor
+                
+        &__textarea
+            height: 96px
+            resize: none
+
+main
+    .bg-cloud
+        &-1
+            &_page_order
+                top: 20%      
+        &-2
+            &_page_order
+                top: 38%
+
+.modal-alert
+    position: fixed
+    display: none
+    justify-content: center
+    align-items: flex-start
+    width: 100vw
+    height: 100vh
+    background-color: rgba(255, 240, 229, .7)
+    z-index: 100
+    text-align: center
+    &__massage
+        flex-basis: 100%
+        max-width: 317px
+        margin: 7.5% 20px 0
+        padding-bottom: 23px
+        border: 3px solid $mainPinkColor
+        border-radius: 10px
+        background: url(../img/block-about_bg_right.png) 206px 100%/auto 89px no-repeat, url(../img/modal_alert_bg_left.png) bottom left/auto no-repeat, $colorWhite
+        text-align: center
+        font-size: 18px
+        color: $mainHeadingColor
+    &__heading
+        padding: 28px 0 13px
+        font-weight: 500
+    &__text
+        max-width: 220px
+        margin: 0 auto 24px
+    &__btn
+        padding: 2px 37px
+        font-size: 20px
+        text-transform: uppercase
+        font-weight: bold
+        color: $commonTextColor
+        background-color: $colorWhite
+        border: 3px solid $mainPinkColor
+        border-radius: 30px
+        transition: .3s
+        &:hover
+            background-color: $mainPinkColor
+            color: $colorWhite
+
+        

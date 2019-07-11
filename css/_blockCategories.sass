@@ -1,0 +1,65 @@
+.block-categories
+    &_page_main
+        background-color: $blockBgBaigeColor
+    .heading
+        &_block_categories
+            padding: 18px 0 48px
+        &_categories_grid
+            line-height: 60px
+            a
+                color: $mainHeadingColor
+    &__container
+        padding-bottom: 61px
+
+.categories-grid
+    display: grid
+    grid-template-columns: 314px 360px 236px    
+    grid-template-rows: repeat(2, 204px)
+    grid-template-areas: 'a b c' 'a d d'
+    grid-column-gap: 30px 
+    grid-row-gap: 34px
+    &__item
+        display: flex
+        align-items: flex-end
+        a
+            display: flex
+            align-items: flex-end
+            width: 100%
+            height: 100%
+        &_bubblegums
+            grid-area: a
+            background: url(../img/categories-bubblegum-bg.png) top left/cover no-repeat
+            .heading
+                &_categories_grid
+                    padding-bottom: 31px
+        &_novelty
+            grid-area: b
+            background: url(../img/categories-novelty-bg.png) top right/cover no-repeat
+            .heading
+                &_categories_grid
+                    max-width: 170px
+                    padding-bottom: 42px
+                    padding-left: 44px
+                    text-align: left
+        &_image
+            grid-area: c
+            position: relative
+            background: $itemsBgColor url(../img/categories-image-bg.png) -22px -57px /auto no-repeat
+            img
+                position: absolute
+                top: -106px
+                right: 5px
+        &_giftsets
+            grid-area: d
+            position: relative
+            background: url(../img/categories-giftsets-bg.png) top right/cover no-repeat
+            img
+                position: absolute
+                top: 0
+                right: -45px
+            .heading
+                &_categories_grid
+                    max-width: 230px
+                    padding-bottom: 39px
+                    padding-left: 44px
+                    text-align: left
