@@ -2836,7 +2836,7 @@ main .bg-cloud-2_page_order {
       margin: 9px 0;
       max-width: 50vw; }
   .block-goods .product-list {
-    grid-template-columns: 203px;
+    grid-template-columns: 218px;
     grid-template-rows: auto;
     padding: 0;
     width: 218px; }
