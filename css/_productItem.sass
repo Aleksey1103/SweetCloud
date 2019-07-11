@@ -164,33 +164,45 @@
         height: 30px
         border: 2px solid $plusMinusBtnColor
         border-radius: 50%
-        color: $mainPinkColor
         transition: background-color, color .3s
         z-index: 0
         &:hover
             background-color: $plusMinusBtnColor
-            color: $colorWhite
         &:first-of-type
             &::before
                 content: ''
                 position: absolute
-                width: 15px
+                width: 16px
                 height: 2px
                 background-color: $plusMinusBtnColor
-                font-size: 50px
-                top: 11.5px
-                left: 4.5px
+                top: 12px
+                left: 5px
                 z-index: 1
             &:hover
                 &::before
                     background-color: $colorWhite
         &:last-of-type
             &::before
-                content: '+'
+                content: ''
                 position: absolute
-                font-size: 30px
-                top: -5.5px
-                left: 3.5px
+                width: 16px
+                height: 2px
+                background-color: $plusMinusBtnColor
+                top: 12px
+                left: 5px
+                z-index: 1
+            &::after
+                content: ''
+                position: absolute
+                width: 2px
+                height: 16px
+                background-color: $plusMinusBtnColor
+                top: 5px
+                left: 12px
+                z-index: 1
+            &:hover
+                &::before, &::after
+                    background-color: $colorWhite
 
 .block-goods
     &_page_product-item

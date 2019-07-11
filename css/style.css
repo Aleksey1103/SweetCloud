@@ -447,7 +447,10 @@ header {
   position: absolute;
   bottom: 100%;
   left: 0;
-  width: calc(100vw - 20px);
+  width: 100%;
+  padding-bottom: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(#fff));
+  background: linear-gradient(to top, transparent, #fff);
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -492,13 +495,13 @@ header {
 .btn-close {
   display: none;
   cursor: pointer;
-  width: 19px;
+  min-width: 19px;
   height: 19px;
   padding: 0;
-  margin: 68px 0 0 12px;
+  margin: 68px 20px 0 12px;
   border: none;
   background: transparent url(../img/modal-close-btn.svg) center/cover no-repeat;
-  opacity: 0.5;
+  opacity: 0.7;
   -webkit-transition: 0.3s;
   transition: 0.3s; }
   .btn-close:hover {
@@ -1478,31 +1481,42 @@ main .bg-cloud-4_page_sales {
     height: 30px;
     border: 2px solid #e2788c;
     border-radius: 50%;
-    color: #ff788c;
     -webkit-transition: background-color, color 0.3s;
     transition: background-color, color 0.3s;
     z-index: 0; }
     .block-quantity__btn:hover {
-      background-color: #e2788c;
-      color: #ffffff; }
+      background-color: #e2788c; }
     .block-quantity__btn:first-of-type::before {
       content: "";
       position: absolute;
-      width: 15px;
+      width: 16px;
       height: 2px;
       background-color: #e2788c;
-      font-size: 50px;
-      top: 11.5px;
-      left: 4.5px;
+      top: 12px;
+      left: 5px;
       z-index: 1; }
     .block-quantity__btn:first-of-type:hover::before {
       background-color: #ffffff; }
     .block-quantity__btn:last-of-type::before {
-      content: "+";
+      content: "";
       position: absolute;
-      font-size: 30px;
-      top: -5.5px;
-      left: 3.5px; }
+      width: 16px;
+      height: 2px;
+      background-color: #e2788c;
+      top: 12px;
+      left: 5px;
+      z-index: 1; }
+    .block-quantity__btn:last-of-type::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 16px;
+      background-color: #e2788c;
+      top: 5px;
+      left: 12px;
+      z-index: 1; }
+    .block-quantity__btn:last-of-type:hover::before, .block-quantity__btn:last-of-type:hover::after {
+      background-color: #ffffff; }
 
 .block-goods_page_product-item .heading_block_goods {
   margin-bottom: 31px; }
@@ -2891,39 +2905,41 @@ main .bg-cloud-2_page_order {
     .categories-grid__item_giftsets img {
       display: none; }
 
-  .block-gifts_page_gift_sets .heading_block_gifts {
-    padding: 15px 0; }
-  .block-gifts_page_gift_sets .block-gifts__container {
-    padding-bottom: 0; }
-  .block-gifts_page_gift_sets .block-gifts__description {
-    padding: 0 20px 32px;
-    max-width: 400px;
-    margin: 0 auto; }
-  .block-gifts__container {
-    width: 68.75vw;
-    padding-bottom: 0; }
-    .block-gifts__container .slick-prev, .block-gifts__container .slick-next {
-      top: 30%; }
-      .block-gifts__container .slick-prev svg, .block-gifts__container .slick-next svg {
-        width: 23px;
-        height: 40px; }
-    .block-gifts__container .slick-prev {
-      left: -9.375vw; }
-    .block-gifts__container .slick-next {
-      right: -9.375vw; }
-  .block-gifts__item img {
-    width: 100%;
-    max-width: 380px; }
-  .block-gifts-link {
-    padding: 0 0 95px; }
-    .block-gifts-link__container {
-      width: 87.5vw;
-      padding: 6px 0;
-      text-align: center; }
-      .block-gifts-link__container .min-cost {
-        top: auto;
-        bottom: -70px;
-        left: calc(50% - 80px); }
+  .block-gifts {
+    background-image: none; }
+    .block-gifts_page_gift_sets .heading_block_gifts {
+      padding: 15px 0; }
+    .block-gifts_page_gift_sets .block-gifts__container {
+      padding-bottom: 0; }
+    .block-gifts_page_gift_sets .block-gifts__description {
+      padding: 0 20px 32px;
+      max-width: 400px;
+      margin: 0 auto; }
+    .block-gifts__container {
+      width: 68.75vw;
+      padding-bottom: 0; }
+      .block-gifts__container .slick-prev, .block-gifts__container .slick-next {
+        top: 30%; }
+        .block-gifts__container .slick-prev svg, .block-gifts__container .slick-next svg {
+          width: 23px;
+          height: 40px; }
+      .block-gifts__container .slick-prev {
+        left: -9.375vw; }
+      .block-gifts__container .slick-next {
+        right: -9.375vw; }
+    .block-gifts__item img {
+      width: 100%;
+      max-width: 380px; }
+    .block-gifts-link {
+      padding: 0 0 95px; }
+      .block-gifts-link__container {
+        width: 87.5vw;
+        padding: 6px 0;
+        text-align: center; }
+        .block-gifts-link__container .min-cost {
+          top: auto;
+          bottom: -70px;
+          left: calc(50% - 80px); }
 
   .block-review .center {
     width: 68.75vw; }
