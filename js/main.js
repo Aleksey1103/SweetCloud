@@ -86,23 +86,11 @@ $(document).ready(function(){
 
 
 
-    // $(".block-goods__btn").click(function(){
-
-    //     let groupName = $(this).attr("id");
-          
-    //         $(".product-list").hide();            
-    //         $("." + groupName).css({"display": "grid", "opacity": "0"}).animate({opacity: "1"});
-    //         $(".block-goods__btn").removeClass("btn_active");
-    //         $(this).addClass("btn_active");
-
-    // });
-
-
     $(".block-goods__btn").click(function(){
 
         let windowSize = $(window).outerWidth(),
             groupName = $(this).attr("id");
-            
+
             if (windowSize > 600) {
 
                 $(".product-list").hide();            
@@ -336,12 +324,5 @@ $(document).ready(function(){
 
     });
 
-
-
-    // $(window).resize(function(){
-    
-    //     location.reload();
-    
-    // }); 
 
 });
