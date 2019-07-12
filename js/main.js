@@ -330,5 +330,23 @@ $(document).ready(function(){
 
     });
 
+    
+
+
+    function showCost() {
+
+        let giftSetsItem = document.getElementsByClassName("block-gifts__item slick-active")[0],
+            cost = giftSetsItem.dataset.itemCost;
+
+            document.getElementById("minCost").innerText = cost;
+          
+    }
+
+    $(".gifts-arrow").click(function(){
+
+        showCost();
+
+    });
+
 
 });
