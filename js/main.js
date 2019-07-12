@@ -315,7 +315,7 @@ $(document).ready(function(){
 
     $("#blockOrderBtn").click(function(event){
 
-        event.preventDefault(); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        event.preventDefault();
 
         $(".modal-alert").css({"display": "flex", "opacity": "0"}).animate({opacity: 1}, 300);
         
@@ -324,11 +324,12 @@ $(document).ready(function(){
             $(".modal-alert").animate({opacity: 0}, 300, function(){
 
                 $(".modal-alert").removeAttr("style");
+                $("form[name='sendOrder']").submit();
             });
 
         });
 
-    });
+    });   
     
 
 
