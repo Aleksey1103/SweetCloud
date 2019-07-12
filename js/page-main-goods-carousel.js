@@ -21,7 +21,6 @@ $(document).ready(function(){
             ]
 
         });
-        
         $(".novelty").slick({
 
             infinite: true,
@@ -41,7 +40,6 @@ $(document).ready(function(){
             ]
 
         });
-
         $(".sale").slick({
 
             infinite: true,

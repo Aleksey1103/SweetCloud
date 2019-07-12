@@ -848,8 +848,6 @@ header {
     opacity: 0.3; }
   .block-review .center .winner__photo-1, .block-review .center .winner__photo-2, .block-review .center .winner__photo-3, .block-review .center .winner__photo-4, .block-review .center .winner__photo-5 {
     width: 100%;
-    border-radius: 50%;
-    justify-self: center;
     -webkit-transition: all 1s;
     transition: all 1s; }
     .block-review .center .winner__photo-1 .avatar, .block-review .center .winner__photo-2 .avatar, .block-review .center .winner__photo-3 .avatar, .block-review .center .winner__photo-4 .avatar, .block-review .center .winner__photo-5 .avatar {
@@ -1078,6 +1076,136 @@ header {
 
 .container .five {
   left: 0px; }
+
+.center-slick {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: calc(100% - 110px);
+  max-width: 970px;
+  margin: 0 auto; }
+  .center-slick #b, .center-slick #c, .center-slick #d-center, .center-slick #e, .center-slick #f, .center-slick .b, .center-slick .c, .center-slick .d, .center-slick .e, .center-slick .f {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, -webkit-max-content) minmax(135px, auto) -webkit-max-content;
+    grid-template-rows: repeat(2, max-content) minmax(135px, auto) max-content;
+    margin: 24px;
+    -webkit-box-shadow: 0 4px 43px rgba(252, 211, 206, 0.35);
+            box-shadow: 0 4px 43px rgba(252, 211, 206, 0.35);
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 438px;
+    opacity: 1;
+    z-index: 3; }
+    .center-slick #b span[class^="winner__photo"], .center-slick #c span[class^="winner__photo"], .center-slick #d-center span[class^="winner__photo"], .center-slick #e span[class^="winner__photo"], .center-slick #f span[class^="winner__photo"], .center-slick .b span[class^="winner__photo"], .center-slick .c span[class^="winner__photo"], .center-slick .d span[class^="winner__photo"], .center-slick .e span[class^="winner__photo"], .center-slick .f span[class^="winner__photo"] {
+      width: 100%;
+      height: 87px; }
+      .center-slick #b span[class^="winner__photo"] .avatar, .center-slick #c span[class^="winner__photo"] .avatar, .center-slick #d-center span[class^="winner__photo"] .avatar, .center-slick #e span[class^="winner__photo"] .avatar, .center-slick #f span[class^="winner__photo"] .avatar, .center-slick .b span[class^="winner__photo"] .avatar, .center-slick .c span[class^="winner__photo"] .avatar, .center-slick .d span[class^="winner__photo"] .avatar, .center-slick .e span[class^="winner__photo"] .avatar, .center-slick .f span[class^="winner__photo"] .avatar {
+        position: absolute;
+        top: -24px;
+        left: calc(50% - 48.5px);
+        width: 97px;
+        height: 97px;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        -webkit-transition: 1s;
+        transition: 1s; }
+        .center-slick #b span[class^="winner__photo"] .avatar img, .center-slick #c span[class^="winner__photo"] .avatar img, .center-slick #d-center span[class^="winner__photo"] .avatar img, .center-slick #e span[class^="winner__photo"] .avatar img, .center-slick #f span[class^="winner__photo"] .avatar img, .center-slick .b span[class^="winner__photo"] .avatar img, .center-slick .c span[class^="winner__photo"] .avatar img, .center-slick .d span[class^="winner__photo"] .avatar img, .center-slick .e span[class^="winner__photo"] .avatar img, .center-slick .f span[class^="winner__photo"] .avatar img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          -o-object-fit: cover;
+             object-fit: cover; }
+    .center-slick #b h3[class^="winner__name"], .center-slick #c h3[class^="winner__name"], .center-slick #d-center h3[class^="winner__name"], .center-slick #e h3[class^="winner__name"], .center-slick #f h3[class^="winner__name"], .center-slick .b h3[class^="winner__name"], .center-slick .c h3[class^="winner__name"], .center-slick .d h3[class^="winner__name"], .center-slick .e h3[class^="winner__name"], .center-slick .f h3[class^="winner__name"] {
+      justify-self: center;
+      font-family: "MyriadPro";
+      font-weight: 800;
+      color: #5b2b17;
+      font-size: 16px;
+      padding-bottom: 31px;
+      letter-spacing: 0.05px; }
+    .center-slick #b p[class^="winner-txt"], .center-slick #c p[class^="winner-txt"], .center-slick #d-center p[class^="winner-txt"], .center-slick #e p[class^="winner-txt"], .center-slick #f p[class^="winner-txt"], .center-slick .b p[class^="winner-txt"], .center-slick .c p[class^="winner-txt"], .center-slick .d p[class^="winner-txt"], .center-slick .e p[class^="winner-txt"], .center-slick .f p[class^="winner-txt"] {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      font-family: "MyriadPro";
+      overflow: hidden;
+      font-weight: 400;
+      text-align: center;
+      color: #5b2b17;
+      max-height: none;
+      padding: 0 25px;
+      font-size: 16px;
+      line-height: 19px; }
+    .center-slick #b span[class^="stars"], .center-slick #c span[class^="stars"], .center-slick #d-center span[class^="stars"], .center-slick #e span[class^="stars"], .center-slick #f span[class^="stars"], .center-slick .b span[class^="stars"], .center-slick .c span[class^="stars"], .center-slick .d span[class^="stars"], .center-slick .e span[class^="stars"], .center-slick .f span[class^="stars"] {
+      justify-self: center;
+      -ms-flex-item-align: end;
+          align-self: end;
+      background: url("../img/review-stars.png") top center/100% no-repeat;
+      width: 154px;
+      height: 22px;
+      margin-bottom: 14px;
+      margin-top: 21px; }
+  .center-slick .slick-prev, .center-slick .slick-next {
+    position: absolute;
+    top: 33%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    -ms-flex-item-align: center;
+        align-self: center;
+    border: none;
+    background-color: transparent;
+    padding: 0; }
+    .center-slick .slick-prev svg, .center-slick .slick-next svg {
+      width: 35px;
+      height: 60px;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+      .center-slick .slick-prev svg:hover, .center-slick .slick-next svg:hover {
+        fill: #ff788c; }
+  .center-slick .slick-prev {
+    left: -35px; }
+  .center-slick .slick-next {
+    right: -35px; }
+  .center-slick .slick-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 26px 0 50px; }
+    .center-slick .slick-dots button {
+      display: block;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 5px;
+      background-color: transparent;
+      font-size: 0px;
+      color: transpatent;
+      margin: 0 5px;
+      border-radius: 50%;
+      border: solid 2px #ffd4cf; }
+      .center-slick .slick-dots button:hover {
+        background-color: #ffd4cf; }
+    .center-slick .slick-dots .slick-active button {
+      background-color: #ffd4cf; }
 
 footer {
   background-color: #fff0e5; }
@@ -1541,8 +1669,9 @@ main .bg-cloud-4_page_product-item {
 
 .modal-container {
   display: none;
-  position: absolute;
-  width: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  width: 100vw;
   height: 100%;
   top: 0;
   left: 0;
@@ -1568,7 +1697,7 @@ main .bg-cloud-4_page_product-item {
     position: relative;
     width: 40vw;
     height: 40vw;
-    margin: 15vh auto 0;
+    margin: 15vh auto 15vh;
     overflow: hidden; }
     .modal-container__img img {
       position: absolute;
@@ -1584,7 +1713,7 @@ main .bg-cloud-4_page_product-item {
     display: none;
     width: 50vw;
     height: 30vw;
-    margin: 15vh auto 0; }
+    margin: 15vh auto 15vh; }
     .modal-container__video iframe {
       width: 100%;
       height: 100%; }
@@ -2213,102 +2342,6 @@ main .bg-cloud-2_page_order {
     width: calc(100% - 110px);
     margin: 0 auto; }
 
-  .block-review .center {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    position: relative;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    width: calc(100% - 110px);
-    max-width: 970px; }
-    .block-review .center #b, .block-review .center #c, .block-review .center #d-center, .block-review .center #e, .block-review .center #f, .block-review .center .b, .block-review .center .c, .block-review .center .d, .block-review .center .e, .block-review .center .f {
-      position: relative;
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: repeat(2, -webkit-max-content) minmax(135px, auto) -webkit-max-content;
-      grid-template-rows: repeat(2, max-content) minmax(135px, auto) max-content;
-      margin: 24px;
-      -webkit-box-shadow: 0 4px 43px rgba(252, 211, 206, 0.35);
-              box-shadow: 0 4px 43px rgba(252, 211, 206, 0.35);
-      background-color: #ffffff;
-      top: 0;
-      left: 0;
-      width: 100%;
-      max-width: 438px;
-      opacity: 1;
-      z-index: 3; }
-      .block-review .center #b span[class^="winner__photo"], .block-review .center #c span[class^="winner__photo"], .block-review .center #d-center span[class^="winner__photo"], .block-review .center #e span[class^="winner__photo"], .block-review .center #f span[class^="winner__photo"], .block-review .center .b span[class^="winner__photo"], .block-review .center .c span[class^="winner__photo"], .block-review .center .d span[class^="winner__photo"], .block-review .center .e span[class^="winner__photo"], .block-review .center .f span[class^="winner__photo"] {
-        height: 87px; }
-        .block-review .center #b span[class^="winner__photo"] .avatar, .block-review .center #c span[class^="winner__photo"] .avatar, .block-review .center #d-center span[class^="winner__photo"] .avatar, .block-review .center #e span[class^="winner__photo"] .avatar, .block-review .center #f span[class^="winner__photo"] .avatar, .block-review .center .b span[class^="winner__photo"] .avatar, .block-review .center .c span[class^="winner__photo"] .avatar, .block-review .center .d span[class^="winner__photo"] .avatar, .block-review .center .e span[class^="winner__photo"] .avatar, .block-review .center .f span[class^="winner__photo"] .avatar {
-          top: -24px;
-          left: calc(50% - 48.5px);
-          width: 97px;
-          height: 97px; }
-      .block-review .center #b h3[class^="winner__name"], .block-review .center #c h3[class^="winner__name"], .block-review .center #d-center h3[class^="winner__name"], .block-review .center #e h3[class^="winner__name"], .block-review .center #f h3[class^="winner__name"], .block-review .center .b h3[class^="winner__name"], .block-review .center .c h3[class^="winner__name"], .block-review .center .d h3[class^="winner__name"], .block-review .center .e h3[class^="winner__name"], .block-review .center .f h3[class^="winner__name"] {
-        font-size: 16px;
-        padding-bottom: 31px;
-        letter-spacing: 0.05px; }
-      .block-review .center #b p[class^="winner-txt"], .block-review .center #c p[class^="winner-txt"], .block-review .center #d-center p[class^="winner-txt"], .block-review .center #e p[class^="winner-txt"], .block-review .center #f p[class^="winner-txt"], .block-review .center .b p[class^="winner-txt"], .block-review .center .c p[class^="winner-txt"], .block-review .center .d p[class^="winner-txt"], .block-review .center .e p[class^="winner-txt"], .block-review .center .f p[class^="winner-txt"] {
-        max-height: none;
-        padding: 0 25px;
-        font-size: 16px;
-        line-height: 19px; }
-      .block-review .center #b span[class^="stars"], .block-review .center #c span[class^="stars"], .block-review .center #d-center span[class^="stars"], .block-review .center #e span[class^="stars"], .block-review .center #f span[class^="stars"], .block-review .center .b span[class^="stars"], .block-review .center .c span[class^="stars"], .block-review .center .d span[class^="stars"], .block-review .center .e span[class^="stars"], .block-review .center .f span[class^="stars"] {
-        width: 154px;
-        height: 22px;
-        margin-bottom: 14px;
-        margin-top: 21px; }
-    .block-review .center .slick-prev, .block-review .center .slick-next {
-      position: absolute;
-      top: 33%;
-      height: -webkit-max-content;
-      height: -moz-max-content;
-      height: max-content;
-      -ms-flex-item-align: center;
-          align-self: center;
-      border: none;
-      background-color: transparent;
-      padding: 0; }
-      .block-review .center .slick-prev svg, .block-review .center .slick-next svg {
-        width: 35px;
-        height: 60px;
-        -webkit-transition: 0.3s;
-        transition: 0.3s; }
-        .block-review .center .slick-prev svg:hover, .block-review .center .slick-next svg:hover {
-          fill: #ff788c; }
-    .block-review .center .slick-prev {
-      left: -35px; }
-    .block-review .center .slick-next {
-      right: -35px; }
-    .block-review .center .slick-dots {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      margin: 26px 0 50px; }
-      .block-review .center .slick-dots button {
-        display: block;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        padding: 5px;
-        background-color: transparent;
-        font-size: 0px;
-        color: transpatent;
-        margin: 0 5px;
-        border-radius: 50%;
-        border: solid 2px #ffd4cf; }
-        .block-review .center .slick-dots button:hover {
-          background-color: #ffd4cf; }
-      .block-review .center .slick-dots .slick-active button {
-        background-color: #ffd4cf; }
   .block-review .radio-wrapper {
     display: none; } }
 @media (max-width: 1080px) {
@@ -2495,11 +2528,11 @@ main .bg-cloud-2_page_order {
   .block-gifts__item img {
     width: 100%; }
 
-  .block-review .center {
+  .block-review .center-slick {
     max-width: 486px; }
-    .block-review .center .slick-prev {
+    .block-review .center-slick .slick-prev {
       left: -70px; }
-    .block-review .center .slick-next {
+    .block-review .center-slick .slick-next {
       right: -70px; }
 
   .footer-links__container {
@@ -2537,7 +2570,6 @@ main .bg-cloud-2_page_order {
     margin-top: 30px; }
 
   .grid-container {
-    grid-template-columns: -webkit-max-content -webkit-max-content;
     grid-template-columns: -webkit-max-content max-content;
     grid-template-columns: max-content max-content;
     grid-template-rows: 1fr 1fr;
@@ -2664,9 +2696,9 @@ main .bg-cloud-2_page_order {
   .block-gifts__item img {
     width: 80%; }
 
-  .block-review .center .slick-prev {
+  .block-review .center-slick .slick-prev {
     left: -40px; }
-  .block-review .center .slick-next {
+  .block-review .center-slick .slick-next {
     right: -40px; }
 
   .footer-links__container {
@@ -2725,7 +2757,7 @@ main .bg-cloud-2_page_order {
     width: 29px;
     height: 50px; }
 
-  .block-review .center .slick-prev svg, .block-review .center .slick-next svg {
+  .block-review .center-slick .slick-prev svg, .block-review .center-slick .slick-next svg {
     width: 29px;
     height: 50px; }
 
@@ -2939,22 +2971,22 @@ main .bg-cloud-2_page_order {
           bottom: -70px;
           left: calc(50% - 80px); }
 
-  .block-review .center {
+  .block-review .center-slick {
     width: 68.75vw; }
-    .block-review .center #b, .block-review .center #c, .block-review .center #d-center, .block-review .center #e, .block-review .center #f, .block-review .center .b, .block-review .center .c, .block-review .center .d, .block-review .center .e, .block-review .center .f {
+    .block-review .center-slick #b, .block-review .center-slick #c, .block-review .center-slick #d-center, .block-review .center-slick #e, .block-review .center-slick #f, .block-review .center-slick .b, .block-review .center-slick .c, .block-review .center-slick .d, .block-review .center-slick .e, .block-review .center-slick .f {
       margin: 24px 0 0 0;
       -webkit-box-shadow: none;
               box-shadow: none; }
-      .block-review .center #b p[class^="winner-txt"], .block-review .center #c p[class^="winner-txt"], .block-review .center #d-center p[class^="winner-txt"], .block-review .center #e p[class^="winner-txt"], .block-review .center #f p[class^="winner-txt"], .block-review .center .b p[class^="winner-txt"], .block-review .center .c p[class^="winner-txt"], .block-review .center .d p[class^="winner-txt"], .block-review .center .e p[class^="winner-txt"], .block-review .center .f p[class^="winner-txt"] {
+      .block-review .center-slick #b p[class^="winner-txt"], .block-review .center-slick #c p[class^="winner-txt"], .block-review .center-slick #d-center p[class^="winner-txt"], .block-review .center-slick #e p[class^="winner-txt"], .block-review .center-slick #f p[class^="winner-txt"], .block-review .center-slick .b p[class^="winner-txt"], .block-review .center-slick .c p[class^="winner-txt"], .block-review .center-slick .d p[class^="winner-txt"], .block-review .center-slick .e p[class^="winner-txt"], .block-review .center-slick .f p[class^="winner-txt"] {
         padding: 0 5px; }
-    .block-review .center .slick-prev, .block-review .center .slick-next {
+    .block-review .center-slick .slick-prev, .block-review .center-slick .slick-next {
       top: 42%; }
-      .block-review .center .slick-prev svg, .block-review .center .slick-next svg {
+      .block-review .center-slick .slick-prev svg, .block-review .center-slick .slick-next svg {
         width: 23px;
         height: 40px; }
-    .block-review .center .slick-prev {
+    .block-review .center-slick .slick-prev {
       left: -9.375vw; }
-    .block-review .center .slick-next {
+    .block-review .center-slick .slick-next {
       right: -9.375vw; }
 
   .block-goods_page_gift_sets .product-list .slick-prev svg, .block-goods_page_gift_sets .product-list .slick-next svg, .block-goods_page_product-item .product-list .slick-prev svg, .block-goods_page_product-item .product-list .slick-next svg {
@@ -3063,7 +3095,7 @@ main .bg-cloud-2_page_order {
 
   .block-review .heading_block_review {
     padding: 33px 0 48px; }
-  .block-review .center .slick-dots {
+  .block-review .center-slick .slick-dots {
     margin: 52px 0 54px; }
 
   .block-features .heading_block_features {
@@ -3312,4 +3344,5 @@ main .bg-cloud-2_page_order {
 
   .block-categories_page_product-item {
     display: none; } }
+
 /*# sourceMappingURL=style.css.map */

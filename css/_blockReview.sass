@@ -1,7 +1,9 @@
 .block-review
     .heading
         &_block_review
-            padding: 33px 0 43px        
+            padding: 33px 0 43px
+
+    //Styles for Custom Carousel
 
     .center
         position: relative
@@ -62,8 +64,6 @@
         .winner__photo
             &-1, &-2, &-3, &-4, &-5
                 width: 100%
-                border-radius: 50%                
-                justify-self: center
                 transition: all 1s
                 .avatar
                     position: absolute
@@ -304,3 +304,114 @@
 
 .container .five 
     left: -0px  
+
+// Styles for Slick Carousel
+
+.center-slick
+            display: flex
+            flex-wrap: wrap
+            position: relative
+            height: max-content
+            width: calc(100% - 110px)
+            max-width: 970px
+            margin: 0 auto
+            #b, #c, #d-center, #e, #f, .b, .c, .d, .e, .f
+                position: relative
+                display: grid    
+                grid-template-columns: auto
+                grid-template-rows: repeat(2, max-content) minmax(135px, auto) max-content
+                margin:  24px
+                box-shadow: 0 4px 43px $shadowColorOpacity2
+                background-color: $colorWhite
+                top: 0
+                left: 0
+                width: 100%
+                max-width: 438px
+                opacity: 1
+                z-index: 3
+                span[class^="winner__photo"]
+                    width: 100%                  
+                    height: 87px
+                    .avatar
+                        position: absolute
+                        top: -24px         
+                        left: calc(50% - 48.5px)
+                        width: 97px
+                        height: 97px
+                        margin: 0 auto
+                        border-radius: 50%
+                        overflow: hidden
+                        transition: 1s
+                        img
+                            position: absolute
+                            width: 100%
+                            height: 100%
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%, -50%)
+                            object-fit: cover
+                h3[class^="winner__name"]
+                    justify-self: center                
+                    font-family: $fontMyriadPro                
+                    font-weight: 800
+                    color: $commonTextColor  
+                    font-size: 16px
+                    padding-bottom: 31px
+                    letter-spacing: 0.05px
+                p[class^="winner-txt"]
+                    box-sizing: border-box               
+                    font-family: $fontMyriadPro
+                    overflow: hidden
+                    font-weight: 400
+                    text-align: center
+                    color: $commonTextColor
+                    max-height: none
+                    padding: 0 25px
+                    font-size: 16px
+                    line-height: 19px
+                span[class^="stars"]
+                    justify-self: center
+                    align-self: end
+                    background: url("../img/review-stars.png")  top center/100% no-repeat 
+                    width: 154px
+                    height: 22px
+                    margin-bottom: 14px
+                    margin-top: 21px
+            .slick-prev, .slick-next
+                position: absolute
+                top: 33%
+                height: max-content
+                align-self: center
+                border: none
+                background-color: transparent
+                padding: 0
+                svg
+                    width: 35px
+                    height: 60px
+                    transition: .3s
+                    &:hover
+                        fill: $mainPinkColor
+            .slick-prev
+                left: -35px
+            .slick-next
+                right: -35px
+            .slick-dots
+                display: flex
+                flex-basis: 100%
+                justify-content: center
+                margin: 26px 0 50px
+                button
+                    display: block
+                    box-sizing: border-box
+                    padding: 5px
+                    background-color: transparent
+                    font-size: 0px
+                    color: transpatent
+                    margin: 0 5px
+                    border-radius: 50%
+                    border: solid 2px $dotsColor
+                    &:hover
+                        background-color: $dotsColor
+                .slick-active
+                    button
+                        background-color: $dotsColor
