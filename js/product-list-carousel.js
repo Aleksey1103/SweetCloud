@@ -16,16 +16,19 @@ $(document).ready(function(){
         responsive: [
             {
                 breakpoint: 1080,
-                settings: "unslick"
+                settings: "unslick",
+                respondTo: "window"
             }, {
                 breakpoint: 900,
                 settings: {
-                    slidesToShow: 3
+                    slidesToShow: 3,
+                    respondTo: "window"
                 } 
             }, {
                 breakpoint: 680,
                 settings: {
-                    slidesToShow: 2
+                    slidesToShow: 2,
+                    respondTo: "window"
                 }
             }
         ]
