@@ -744,11 +744,8 @@ header {
         .block-gifts__container .slick-prev svg:hover, .block-gifts__container .slick-next svg:hover {
           fill: #ff788c; }
   .block-gifts__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    display: block;
+    widht: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
