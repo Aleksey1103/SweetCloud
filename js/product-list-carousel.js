@@ -34,12 +34,21 @@ $(document).ready(function(){
             ]
     
         });
-        
+
     let windowWidth = $(window).outerWidth();
 
          if (windowWidth <= 680) {
 
             $(".product-list").slick("slickSetOption", {respondTo: "slider",}, true);  
+
+        } else if (windowWidth > 680 && windowWidth <= 900) {
+
+            $(".product-list").slick("slickSetOption", {respondTo: "slider",}, true);
+            $(".product-list").find(".slick-arrow").click(function(){
+
+                $(".product-list").slick("slickSetOption", {respondTo: "window",}, true);
+
+            });
 
         }
 
@@ -51,6 +60,15 @@ $(document).ready(function(){
       
                 $(".product-list").slick("slickSetOption", {respondTo: "slider",}, true);
 
+            } else if (windowWidth > 680 && windowWidth <= 900) {
+
+                $(".product-list").slick("slickSetOption", {respondTo: "slider",}, true);
+                $(".product-list").find(".slick-arrow").click(function(){
+    
+                    $(".product-list").slick("slickSetOption", {respondTo: "window",}, true);
+    
+                });
+    
             } else {
 
                 $(".product-list").slick("slickSetOption", {respondTo: "window",}, true);
