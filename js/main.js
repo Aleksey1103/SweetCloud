@@ -40,7 +40,7 @@ $(document).ready(function(){
         
             if (searchFildeWidth == "0px") {
 
-                $(".search-container").css({width: "0", padding: "0"}).find(".search-container__field").css({padding: "0"});
+                $(".search-container").css({width: "0", padding: "0"}).find(".search-container__field").css({display: "block", padding: "0"});
                 $(this).offsetParent().parent().find(".search-container").animate({width: "100%", padding: "0 20px"}, 300, function(){
 
                     $(this).find(".search-container__field").css("padding", "0 18px");
@@ -50,7 +50,11 @@ $(document).ready(function(){
             } else {
 
                 $(this).offsetParent().parent().find(".search-container").find(".search-container__field").css("padding", "0");
-                $(this).offsetParent().parent().find(".search-container").animate({width: "0", padding: "0"}, 300);
+                $(this).offsetParent().parent().find(".search-container").animate({width: "0", padding: "0"}, 300, function(){
+
+                    $(this).offsetParent().parent().find(".search-container").find(".search-container__field").css("display", "none"); 
+
+                });
 
             }        
 
@@ -329,9 +333,7 @@ $(document).ready(function(){
 
         });
 
-    });   
-    
-
+    });
 
     $(".gifts-arrow").click(function(){
 

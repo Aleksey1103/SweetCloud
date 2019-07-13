@@ -24,12 +24,14 @@ $(document).ready(function(){
                  {
                     breakpoint: 900,
                     settings: {
-                        slidesToShow: 3
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
                     } 
                 }, {
                     breakpoint: 680,
                     settings: {
-                        slidesToShow: 2
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
                     }
                 }
             ]
