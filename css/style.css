@@ -745,7 +745,8 @@ header {
           fill: #ff788c; }
   .block-gifts__item {
     display: block;
-    widht: 100%;
+    -ms-flex-preferred-size: 970px;
+        flex-basis: 970px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
