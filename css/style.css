@@ -727,6 +727,8 @@ header {
     height: -moz-max-content;
     height: max-content;
     padding-bottom: 15px; }
+    .block-gifts__container .slick-track {
+      min-width: 8100px; }
     .block-gifts__container .slick-prev, .block-gifts__container .slick-next {
       height: -webkit-max-content;
       height: -moz-max-content;
