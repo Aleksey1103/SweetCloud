@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
 
-    $(".menu-list__link").click(function(event){
+    $(".menu-list__link").on("click touchstart", function(event){
         
         if ($(this).hasClass("dropdown-active")) {
 
@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 
     
-     $(".btn-search").click(function(){
+     $(".btn-search").on("click touchstart", function(){
         
         let searchFildeWidth = $(this).offsetParent().parent().find(".search-container").css("width");
         
@@ -90,7 +90,7 @@ $(document).ready(function(){
 
 
 
-    $(".block-goods__btn").click(function(){
+    $(".block-goods__btn").on("click touchstart", function(){
 
         let windowSize = $(window).outerWidth(),
             groupName = $(this).attr("id");
@@ -135,7 +135,7 @@ $(document).ready(function(){
 
     $(".block-products").find(".product-list-item:gt(15)").hide();
 
-    $(".block-products__btn").click(function(){
+    $(".block-products__btn").on("click touchstart", function(){
 
        let counter = $(this).attr("id");
 
@@ -168,7 +168,7 @@ $(document).ready(function(){
 
 
 
-    $(".btn-order").click(function(){
+    $(".btn-order").on("click touchstart", function(){
 
         let elementClassName = $(this).attr("class");
 
@@ -226,7 +226,7 @@ $(document).ready(function(){
     showFinalOrderAmount();
     changeElementSize();    
 
-    $(".block-quantity__btn").click(function(){
+    $(".block-quantity__btn").on("click touchstart", function(){
 
         let btnType = this.dataset.btnMark,
             quantityValue = $(this).offsetParent().find("input[name='quantity']").val();
@@ -253,7 +253,7 @@ $(document).ready(function(){
 
     
 
-    $(".block-presentation-grid__pic").click(function(){
+    $(".block-presentation-grid__pic").on("click touchstart", function(){
 
         let imgSrc = $(this).find("img").attr("src");
 
@@ -261,7 +261,7 @@ $(document).ready(function(){
             $(".modal-container").find("img").attr("src", imgSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").click(function(){
+            $(".modal-container__btn-close").on("click touchstart", function(){
 
                 $(".modal-container").fadeOut(function(){
 
@@ -274,7 +274,7 @@ $(document).ready(function(){
 
 
 
-    $(".block-presentation-grid__btn").click(function(){
+    $(".block-presentation-grid__btn").on("click touchstart", function(){
 
         let videoSrc = $(this).attr("src");
 
@@ -282,7 +282,7 @@ $(document).ready(function(){
             $(".modal-container").find("iframe").attr("src", videoSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").click(function(){
+            $(".modal-container__btn-close").on("click touchstart", function(){
 
                 $(".modal-container").find("iframe").attr("src", "");
                 $(".modal-container").fadeOut(function(){
@@ -296,14 +296,14 @@ $(document).ready(function(){
 
 
 
-    $(".btn-open").click(function(){
+    $(".btn-open").on("click touchstart", function(){
 
         $(".btn-close").show();
         $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
 
     });
 
-    $(".btn-close").click(function(){
+    $(".btn-close").on("click touchstart", function(){
 
         let backTop = $(".modal-menu").outerHeight();
 
@@ -335,7 +335,7 @@ $(document).ready(function(){
 
     });
 
-    $(".gifts-arrow").click(function(){
+    $(".gifts-arrow").on("click touchstart", function(){
 
         let giftSetsItem = document.getElementsByClassName("block-gifts__item slick-active")[0],
         cost = giftSetsItem.dataset.itemCost;

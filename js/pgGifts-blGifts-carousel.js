@@ -22,7 +22,7 @@ $(document).ready(function(){
                       
     }
 
-    $(".gifts-arrow").click(function(){
+    $(".gifts-arrow").on("click touchstart", function(){
 
         showCost();
 

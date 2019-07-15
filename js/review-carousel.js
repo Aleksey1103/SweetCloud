@@ -109,6 +109,12 @@ $(document).ready(function(){
         document.querySelector('label.container .four').addEventListener('click', func);
         document.querySelector('label.container .five').addEventListener('click', func); 
 
+        document.querySelector('label.container .one').addEventListener('touchstart', func);
+        document.querySelector('label.container .two').addEventListener('touchstart', func);
+        document.querySelector('label.container .three').addEventListener('touchstart', func);
+        document.querySelector('label.container .four').addEventListener('touchstart', func);
+        document.querySelector('label.container .five').addEventListener('touchstart', func); 
+
     }
 
 
