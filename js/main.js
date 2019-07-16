@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
 
-    $(".menu-list__link").on("click touchstart", function(event){
+    $(".menu-list__link").on("click touched", function(event){
         
         if ($(this).hasClass("dropdown-active")) {
 
@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 
     
-     $(".btn-search").on("click touchstart", function(){
+     $(".btn-search").on("click touched", function(){
         
         let searchFildeWidth = $(this).offsetParent().parent().find(".search-container").css("width");
         
@@ -90,7 +90,7 @@ $(document).ready(function(){
 
 
 
-    $(".block-goods__btn").on("click touchstart", function(){
+    $(".block-goods__btn").on("click touched", function(){
 
         let windowSize = $(window).outerWidth(),
             groupName = $(this).attr("id");
@@ -135,7 +135,7 @@ $(document).ready(function(){
 
     $(".block-products").find(".product-list-item:gt(15)").hide();
 
-    $(".block-products__btn").on("click touchstart", function(){
+    $(".block-products__btn").on("click touched", function(){
 
        let counter = $(this).attr("id");
 
@@ -168,7 +168,7 @@ $(document).ready(function(){
 
 
 
-    $(".btn-order").on("click touchstart", function(){
+    $(".btn-order").on("click touched", function(){
 
         let elementClassName = $(this).attr("class");
 
@@ -226,7 +226,7 @@ $(document).ready(function(){
     showFinalOrderAmount();
     changeElementSize();    
 
-    $(".block-quantity__btn").on("click touchstart", function(){
+    $(".block-quantity__btn").on("click touched", function(){
 
         let btnType = this.dataset.btnMark,
             quantityValue = $(this).offsetParent().find("input[name='quantity']").val();
@@ -253,7 +253,7 @@ $(document).ready(function(){
 
     
 
-    $(".block-presentation-grid__pic").on("click touchstart", function(){
+    $(".block-presentation-grid__pic").on("click touched", function(){
 
         let imgSrc = $(this).find("img").attr("src");
 
@@ -261,7 +261,7 @@ $(document).ready(function(){
             $(".modal-container").find("img").attr("src", imgSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").on("click touchstart", function(){
+            $(".modal-container__btn-close").on("click touched", function(){
 
                 $(".modal-container").fadeOut(function(){
 
@@ -274,7 +274,7 @@ $(document).ready(function(){
 
 
 
-    $(".block-presentation-grid__btn").on("click touchstart", function(){
+    $(".block-presentation-grid__btn").on("click touched", function(){
 
         let videoSrc = $(this).attr("src");
 
@@ -282,7 +282,7 @@ $(document).ready(function(){
             $(".modal-container").find("iframe").attr("src", videoSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").on("click touchstart", function(){
+            $(".modal-container__btn-close").on("click touched", function(){
 
                 $(".modal-container").find("iframe").attr("src", "");
                 $(".modal-container").fadeOut(function(){
@@ -296,14 +296,14 @@ $(document).ready(function(){
 
 
 
-    $(".btn-open").on("click touchstart", function(){
+    $(".btn-open").on("click touched", function(){
 
         $(".btn-close").show();
         $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
 
     });
 
-    $(".btn-close").on("click touchstart", function(){
+    $(".btn-close").on("click touched", function(){
 
         let backTop = $(".modal-menu").outerHeight();
 
@@ -335,7 +335,7 @@ $(document).ready(function(){
 
     });
 
-    $(".gifts-arrow").on("click touchstart", function(){
+    $(".gifts-arrow").on("click touched", function(){
 
         let giftSetsItem = document.getElementsByClassName("block-gifts__item slick-active")[0],
         cost = giftSetsItem.dataset.itemCost;
