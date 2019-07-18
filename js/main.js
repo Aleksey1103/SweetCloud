@@ -4,13 +4,13 @@ $(document).ready(function(){
 
 
 
-    $(".menu-list__link").on("click touched", function(event){
+    $(".menu-list__link").on("click touchstart", function(event){
         
         if ($(this).hasClass("dropdown-active")) {
 
             event.preventDefault();
 
-        }      
+        }
 
     });
 
@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 
     
-     $(".btn-search").on("click touched", function(){
+     $(".btn-search").on("click touchstart", function(){
         
         let searchFildeWidth = $(this).offsetParent().parent().find(".search-container").css("width");
         
@@ -56,10 +56,12 @@ $(document).ready(function(){
 
                 });
 
-            }        
+            }
+            
+            return false;
 
     });
-    
+
 
 
      $(window).scroll(function(){        
@@ -90,7 +92,7 @@ $(document).ready(function(){
 
 
 
-    $(".block-goods__btn").on("click touched", function(){
+    $(".block-goods__btn").on("click touchstart", function(){
 
         let windowSize = $(window).outerWidth(),
             groupName = $(this).attr("id");
@@ -128,6 +130,7 @@ $(document).ready(function(){
 
             $(".block-goods__btn").removeClass("btn_active");
             $(this).addClass("btn_active");
+            return false;
 
     });
 
@@ -135,7 +138,7 @@ $(document).ready(function(){
 
     $(".block-products").find(".product-list-item:gt(15)").hide();
 
-    $(".block-products__btn").on("click touched", function(){
+    $(".block-products__btn").on("click touchstart", function(){
 
        let counter = $(this).attr("id");
 
@@ -162,18 +165,22 @@ $(document).ready(function(){
         $(this).fadeOut().text("Показать все").attr("id", "all");
         $(".block-products__btn").fadeIn();
 
-       }    
+       }
+       
+       return false;
 
     });    
 
 
 
-    $(".btn-order").on("click touched", function(){
+    $(".btn-order").on("click touchstart", function(){
 
         let elementClassName = $(this).attr("class");
 
         $("[class^='" + elementClassName + "']").removeClass("checked").offsetParent().find("input[type='checkbox']").removeAttr("checked");
         $(this).addClass("checked").offsetParent().find("input[type='checkbox']").attr("checked", "checked");
+
+        return false;
 
     });
 
@@ -226,7 +233,7 @@ $(document).ready(function(){
     showFinalOrderAmount();
     changeElementSize();    
 
-    $(".block-quantity__btn").on("click touched", function(){
+    $(".block-quantity__btn").on("click touchstart", function(){
 
         let btnType = this.dataset.btnMark,
             quantityValue = $(this).offsetParent().find("input[name='quantity']").val();
@@ -249,11 +256,13 @@ $(document).ready(function(){
         showFinalOrderAmount();
         changeElementSize();
 
+        return false;
+
     });
 
     
 
-    $(".block-presentation-grid__pic").on("click touched", function(){
+    $(".block-presentation-grid__pic").on("click touchstart", function(){
 
         let imgSrc = $(this).find("img").attr("src");
 
@@ -261,7 +270,7 @@ $(document).ready(function(){
             $(".modal-container").find("img").attr("src", imgSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").on("click touched", function(){
+            $(".modal-container__btn-close").on("click touchstart", function(){
 
                 $(".modal-container").fadeOut(function(){
 
@@ -269,12 +278,16 @@ $(document).ready(function(){
                     
                 });
 
+                return false;
+
             });
+
+            return false;
     });
 
 
 
-    $(".block-presentation-grid__btn").on("click touched", function(){
+    $(".block-presentation-grid__btn").on("click touchstart", function(){
 
         let videoSrc = $(this).attr("src");
 
@@ -282,7 +295,7 @@ $(document).ready(function(){
             $(".modal-container").find("iframe").attr("src", videoSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").on("click touched", function(){
+            $(".modal-container__btn-close").on("click touchstart", function(){
 
                 $(".modal-container").find("iframe").attr("src", "");
                 $(".modal-container").fadeOut(function(){
@@ -291,19 +304,25 @@ $(document).ready(function(){
                     
                 });
 
+                return false;
+
             });
+
+            return false;
     });
 
 
 
-    $(".btn-open").on("click touched", function(){
+    $(".btn-open").on("click touchstart", function(){
 
         $(".btn-close").show();
         $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
 
+        return false;
+
     });
 
-    $(".btn-close").on("click touched", function(){
+    $(".btn-close").on("click touchstart", function(){
 
         let backTop = $(".modal-menu").outerHeight();
 
@@ -313,6 +332,8 @@ $(document).ready(function(){
             $(".btn-close").hide();
 
         });
+
+        return false;
 
     });
 
@@ -333,9 +354,11 @@ $(document).ready(function(){
 
         });
 
+        return false;
+
     });
 
-    $(".gifts-arrow").on("click touched", function(){
+    $(".gifts-arrow").on("click touchstart", function(){
 
         let giftSetsItem = document.getElementsByClassName("block-gifts__item slick-active")[0],
         cost = giftSetsItem.dataset.itemCost;
