@@ -2,9 +2,21 @@
 
 $(document).ready(function(){
 
+    var eventClickTouch;
 
+    if ("ontouchstart" in document.documentElement) {
 
-    $(".menu-list__link").on("click touchstart", function(event){
+        console.log("It a touch screen device.");
+        eventClickTouch = "touchstart";
+
+    } else {
+
+        console.log("Others devices");
+        eventClickTouch = "click";
+    }
+    
+
+    $(".menu-list__link").on(eventClickTouch, function(event){
         
         if ($(this).hasClass("dropdown-active")) {
 
@@ -34,7 +46,7 @@ $(document).ready(function(){
 
 
     
-     $(".btn-search").on("click touchstart", function(){
+     $(".btn-search").on(eventClickTouch, function(){
         
         let searchFildeWidth = $(this).offsetParent().parent().find(".search-container").css("width");
         
@@ -92,7 +104,7 @@ $(document).ready(function(){
 
 
 
-    $(".block-goods__btn").on("click touchstart", function(){
+    $(".block-goods__btn").on(eventClickTouch, function(){
 
         let windowSize = $(window).outerWidth(),
             groupName = $(this).attr("id");
@@ -138,7 +150,7 @@ $(document).ready(function(){
 
     $(".block-products").find(".product-list-item:gt(15)").hide();
 
-    $(".block-products__btn").on("click touchstart", function(){
+    $(".block-products__btn").on(eventClickTouch, function(){
 
        let counter = $(this).attr("id");
 
@@ -173,7 +185,7 @@ $(document).ready(function(){
 
 
 
-    $(".btn-order").on("click touchstart", function(){
+    $(".btn-order").on(eventClickTouch, function(){
 
         let elementClassName = $(this).attr("class");
 
@@ -233,7 +245,7 @@ $(document).ready(function(){
     showFinalOrderAmount();
     changeElementSize();    
 
-    $(".block-quantity__btn").on("click touchstart", function(){
+    $(".block-quantity__btn").on(eventClickTouch, function(){
 
         let btnType = this.dataset.btnMark,
             quantityValue = $(this).offsetParent().find("input[name='quantity']").val();
@@ -262,7 +274,7 @@ $(document).ready(function(){
 
     
 
-    $(".block-presentation-grid__pic").on("click touchstart", function(){
+    $(".block-presentation-grid__pic").on(eventClickTouch, function(){
 
         let imgSrc = $(this).find("img").attr("src");
 
@@ -270,7 +282,7 @@ $(document).ready(function(){
             $(".modal-container").find("img").attr("src", imgSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").on("click touchstart", function(){
+            $(".modal-container__btn-close").on(eventClickTouch, function(){
 
                 $(".modal-container").fadeOut(function(){
 
@@ -287,7 +299,7 @@ $(document).ready(function(){
 
 
 
-    $(".block-presentation-grid__btn").on("click touchstart", function(){
+    $(".block-presentation-grid__btn").on(eventClickTouch, function(){
 
         let videoSrc = $(this).attr("src");
 
@@ -295,7 +307,7 @@ $(document).ready(function(){
             $(".modal-container").find("iframe").attr("src", videoSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").on("click touchstart", function(){
+            $(".modal-container__btn-close").on(eventClickTouch, function(){
 
                 $(".modal-container").find("iframe").attr("src", "");
                 $(".modal-container").fadeOut(function(){
@@ -313,7 +325,7 @@ $(document).ready(function(){
 
 
 
-    $(".btn-open").on("click touchstart", function(){
+    $(".btn-open").on(eventClickTouch, function(){
 
         $(".btn-close").show();
         $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
@@ -322,7 +334,7 @@ $(document).ready(function(){
 
     });
 
-    $(".btn-close").on("click touchstart", function(){
+    $(".btn-close").on(eventClickTouch, function(){
 
         let backTop = $(".modal-menu").outerHeight();
 
@@ -358,7 +370,7 @@ $(document).ready(function(){
 
     });
 
-    $(".gifts-arrow").on("click touchstart", function(){
+    $(".gifts-arrow").on(eventClickTouch, function(){
 
         let giftSetsItem = document.getElementsByClassName("block-gifts__item slick-active")[0],
         cost = giftSetsItem.dataset.itemCost;

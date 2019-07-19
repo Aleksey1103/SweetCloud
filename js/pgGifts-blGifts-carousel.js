@@ -21,8 +21,9 @@ $(document).ready(function(){
             document.getElementById("setName").innerText = "\"" + name + "\"";
                       
     }
+    
 
-    $(".gifts-arrow").on("click touchstart", function(){
+    $(".gifts-arrow").on("click", function(){
 
         showCost();
 
