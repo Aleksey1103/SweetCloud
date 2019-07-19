@@ -46,7 +46,9 @@ $(document).ready(function(){
 
 
     
-     $(".btn-search").on(eventClickTouch, function(){
+     $(".btn-search").on(eventClickTouch, function(event){
+
+        event.preventDefault();
         
         let searchFildeWidth = $(this).offsetParent().parent().find(".search-container").css("width");
         
@@ -69,8 +71,6 @@ $(document).ready(function(){
                 });
 
             }
-            
-            return false;
 
     });
 
