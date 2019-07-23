@@ -7,19 +7,25 @@
         padding: 0 32px
 
 
-.block-products__menu
+.block-products-menu
     display: flex
     justify-content: center
     padding-bottom: 66px
-    .btn
-        flex-basis: 38px
+    &__item
+        position: relative
+        flex-basis: 100%
+        max-width: 38px
         margin: 0 6px
-        font-size: 18px
-        padding-left: 3px
         &:last-child
-            flex-basis: 100%
-            letter-spacing: .5px
-            padding-left: 0
+            max-width: 160px
+        .btn
+            flex-basis: 38px            
+            font-size: 18px
+            padding-left: 3px
+            &:last-child
+                flex-basis: 100%
+                letter-spacing: .5px
+                padding-left: 0
 
 main
     .bg-cloud

@@ -1,22 +1,22 @@
-'use strict'
+'use strict';
 
 $(document).ready(function(){
 
-    var eventClickTouch;
+    // var eventClickTouch;
 
-    if ("ontouchstart" in document.documentElement) {
+    // if ("ontouchstart" in document.documentElement) {
 
-        console.log("It a touch screen device.");
-        eventClickTouch = "touchstart";
+    //     console.log("It a touch screen device.");
+    //     eventClickTouch = "touchstart";
 
-    } else {
+    // } else {
 
-        console.log("Others devices");
-        eventClickTouch = "click";
-    }
+    //     console.log("Others devices");
+    //     eventClickTouch = "click";
+    // }
     
 
-    $(".menu-list__link").on(eventClickTouch, function(event){
+    $(".menu-list__link").on("click", function(event){
         
         if ($(this).hasClass("dropdown-active")) {
 
@@ -46,7 +46,7 @@ $(document).ready(function(){
 
 
     
-     $(".btn-search").on(eventClickTouch, function(event){
+     $(".btn-search").on("click", function(event){
 
         event.preventDefault();
         
@@ -104,7 +104,9 @@ $(document).ready(function(){
 
 
 
-    $(".block-goods__btn").on(eventClickTouch, function(){
+    $(".block-goods__btn").on("click", function(event){
+
+        event.preventDefault();
 
         let windowSize = $(window).outerWidth(),
             groupName = $(this).attr("id");
@@ -142,7 +144,6 @@ $(document).ready(function(){
 
             $(".block-goods__btn").removeClass("btn_active");
             $(this).addClass("btn_active");
-            return false;
 
     });
 
@@ -150,7 +151,9 @@ $(document).ready(function(){
 
     $(".block-products").find(".product-list-item:gt(15)").hide();
 
-    $(".block-products__btn").on(eventClickTouch, function(){
+    $(".block-products__btn").on("click", function(event){
+
+        event.preventDefault();
 
        let counter = $(this).attr("id");
 
@@ -168,24 +171,24 @@ $(document).ready(function(){
        } else if(counter == "all") {
 
         $(".product-list-item").fadeIn();
-        $(".block-products__btn").hide();
-        $(this).text("Скрыть").attr("id", "hideAll").fadeIn();
+        $(".block-products-menu__item").hide();
+        $(this).text("Скрыть").attr("id", "hideAll").removeClass("btn_active");
+        $(this).parent().fadeIn();
         
        }  else {
 
         $(".product-list-item:gt(15)").fadeOut();
-        $(this).fadeOut().text("Показать все").attr("id", "all");
-        $(".block-products__btn").fadeIn();
+        $(this).parent().fadeOut();
+        $(this).text("Показать все").attr("id", "all").removeClass("btn_active");
+        $(".block-products-menu__item").fadeIn();
 
        }
-       
-       return false;
 
     });    
 
 
 
-    $(".btn-order").on(eventClickTouch, function(){
+    $(".btn-order").on("click", function(){
 
         let elementClassName = $(this).attr("class");
 
@@ -245,7 +248,7 @@ $(document).ready(function(){
     showFinalOrderAmount();
     changeElementSize();    
 
-    $(".block-quantity__btn").on(eventClickTouch, function(){
+    $(".block-quantity__btn").on("click", function(){
 
         let btnType = this.dataset.btnMark,
             quantityValue = $(this).offsetParent().find("input[name='quantity']").val();
@@ -274,15 +277,15 @@ $(document).ready(function(){
 
     
 
-    $(".block-presentation-grid__pic").on(eventClickTouch, function(){
+    $(".block-presentation-grid__btn_pic").on("click", function(){
 
-        let imgSrc = $(this).find("img").attr("src");
+        let imgSrc = $(this).parent().find("img").attr("src");
 
             $(".modal-container").find(".modal-container__img").css("display", "block");
             $(".modal-container").find("img").attr("src", imgSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").on(eventClickTouch, function(){
+            $(".modal-container__btn-close").on("click", function(){
 
                 $(".modal-container").fadeOut(function(){
 
@@ -299,7 +302,7 @@ $(document).ready(function(){
 
 
 
-    $(".block-presentation-grid__btn").on(eventClickTouch, function(){
+    $(".block-presentation-grid__btn_video").on("click", function(){
 
         let videoSrc = $(this).attr("src");
 
@@ -307,7 +310,7 @@ $(document).ready(function(){
             $(".modal-container").find("iframe").attr("src", videoSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").on(eventClickTouch, function(){
+            $(".modal-container__btn-close").on("click", function(){
 
                 $(".modal-container").find("iframe").attr("src", "");
                 $(".modal-container").fadeOut(function(){
@@ -325,7 +328,7 @@ $(document).ready(function(){
 
 
 
-    $(".btn-open").on(eventClickTouch, function(){
+    $(".btn-open").on("click", function(){
 
         $(".btn-close").show();
         $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
@@ -334,7 +337,7 @@ $(document).ready(function(){
 
     });
 
-    $(".btn-close").on(eventClickTouch, function(){
+    $(".btn-close").on("click", function(){
 
         let backTop = $(".modal-menu").outerHeight();
 
@@ -370,7 +373,7 @@ $(document).ready(function(){
 
     });
 
-    $(".gifts-arrow").on(eventClickTouch, function(){
+    $(".gifts-arrow").on("click", function(){
 
         let giftSetsItem = document.getElementsByClassName("block-gifts__item slick-active")[0],
         cost = giftSetsItem.dataset.itemCost;
