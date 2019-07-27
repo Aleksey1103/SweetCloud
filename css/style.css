@@ -56,7 +56,8 @@ ul {
   list-style-type: none; }
 
 * {
-  outline: none; }
+  outline: none;
+  -webkit-tap-highlight-color: transparent; }
 
 a {
   text-decoration: none; }
@@ -2575,7 +2576,6 @@ main .bg-cloud-2_page_order {
     margin-top: 30px; }
 
   .grid-container {
-    grid-template-columns: -webkit-max-content -webkit-max-content;
     grid-template-columns: -webkit-max-content max-content;
     grid-template-columns: max-content max-content;
     grid-template-rows: 1fr 1fr;
@@ -3362,4 +3362,5 @@ main .bg-cloud-2_page_order {
 
   .block-categories_page_product-item {
     display: none; } }
+
 /*# sourceMappingURL=style.css.map */

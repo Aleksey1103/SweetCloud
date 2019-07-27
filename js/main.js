@@ -2,30 +2,9 @@
 
 $(document).ready(function(){
 
-    let eventClickTouch = "click";
-
-    // if ("ontouchstart" in document.documentElement) {
-
-    //     console.log("It a touch screen device.");
-    //     eventClickTouch = "touchstart";
-
-    // } else {
-
-    //     console.log("Others devices");
-    //     eventClickTouch = "click";
-    // }
-    
-
-    // $(".menu-list__link").on(eventClickTouch, function(event){
-        
-    //     if ($(this).hasClass("dropdown-active")) {
-
-    //         event.preventDefault();
-
-    //     }
-
-    // });
-
+    $(".dropdown-active").find(".menu-list__link").click(function(event){
+        event.preventDefault();
+    });
 
     $(".dropdown-active").on({
         "mouseenter": function() {$(this).find(".dropdown-menu").slideDown();},
@@ -35,7 +14,7 @@ $(document).ready(function(){
 
 
     
-     $(".btn-search").on(eventClickTouch, function(event){
+     $(".btn-search").on("click", function(event){
 
         event.preventDefault();
         
@@ -64,7 +43,7 @@ $(document).ready(function(){
     });
 
 
-    $(".block-quantity__btn").on(eventClickTouch, function(){
+    $(".block-quantity__btn").on("click", function(){
 
         let btnType = this.dataset.btnMark,
             quantityValue = $(this).offsetParent().find("input[name='quantity']").val();
@@ -91,7 +70,7 @@ $(document).ready(function(){
 
     
 
-    $(".block-presentation-grid__pic").on(eventClickTouch, function(){
+    $(".block-presentation-grid__pic").on("click", function(){
 
         let imgSrc = $(this).find("img").attr("src");
 
@@ -99,7 +78,7 @@ $(document).ready(function(){
             $(".modal-container").find("img").attr("src", imgSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").on(eventClickTouch, function(){
+            $(".modal-container__btn-close").on("click", function(){
 
                 $(".modal-container").fadeOut(function(){
 
@@ -113,7 +92,7 @@ $(document).ready(function(){
 
 
 
-    $(".block-presentation-grid__btn").on(eventClickTouch, function(){
+    $(".block-presentation-grid__btn").on("click", function(){
 
         let videoSrc = $(this).attr("src");
 
@@ -121,7 +100,7 @@ $(document).ready(function(){
             $(".modal-container").find("iframe").attr("src", videoSrc);
             $(".modal-container").fadeIn(); 
 
-            $(".modal-container__btn-close").on(eventClickTouch, function(){
+            $(".modal-container__btn-close").on("click", function(){
 
                 $(".modal-container").find("iframe").attr("src", "");
                 $(".modal-container").fadeOut(function(){
@@ -136,14 +115,14 @@ $(document).ready(function(){
 
 
 
-    $(".btn-open").on(eventClickTouch, function(){
+    $(".btn-open").on("click", function(){
 
         $(".btn-close").show();
         $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
 
     });
 
-    $(".btn-close").on(eventClickTouch, function(){
+    $(".btn-close").on("click", function(){
 
         let backTop = $(".modal-menu").outerHeight();
 
@@ -175,7 +154,7 @@ $(document).ready(function(){
 
     });
 
-    $(".gifts-arrow").on(eventClickTouch, function(){
+    $(".gifts-arrow").on("click", function(){
 
         let giftSetsItem = document.getElementsByClassName("block-gifts__item slick-active")[0],
         cost = giftSetsItem.dataset.itemCost;
@@ -213,7 +192,7 @@ $(document).ready(function(){
 
 
 
-    $(".block-goods__btn").on(eventClickTouch, function(){
+    $(".block-goods__btn").on("click", function(){
 
         let windowSize = $(window).outerWidth(),
             groupName = $(this).attr("id");
@@ -258,7 +237,7 @@ $(document).ready(function(){
 
     $(".block-products").find(".product-list-item:gt(15)").hide();
 
-    $(".block-products__btn").on(eventClickTouch, function(){
+    $(".block-products__btn").on("click", function(){
 
        let counter = $(this).attr("id");
 
@@ -291,7 +270,7 @@ $(document).ready(function(){
 
 
 
-    $(".btn-order").on(eventClickTouch, function(){
+    $(".btn-order").on("click", function(){
 
         let elementClassName = $(this).attr("class");
 
