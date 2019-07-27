@@ -1,4 +1,4 @@
-//'use strict';
+'use strict';
 
 $(document).ready(function(){
 
@@ -333,7 +333,8 @@ $(document).ready(function(){
         event.preventDefault();
 
         $(".btn-close").show();
-        $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
+        //$(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
+        $(".modal-menu").fadeIn();
 
     });
 
