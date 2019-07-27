@@ -2,47 +2,29 @@
 
 $(document).ready(function(){
 
-    let eventClickTouch;
+    let eventClickTouch = "click";
 
-    if ("ontouchstart" in document.documentElement) {
+    // if ("ontouchstart" in document.documentElement) {
 
-        console.log("It a touch screen device.");
-        eventClickTouch = "touchstart";
+    //     console.log("It a touch screen device.");
+    //     eventClickTouch = "touchstart";
 
-    } else {
+    // } else {
 
-        console.log("Others devices");
-        eventClickTouch = "click";
-    }
+    //     console.log("Others devices");
+    //     eventClickTouch = "click";
+    // }
     
 
-    $(".menu-list__link").on(eventClickTouch, function(event){
+    // $(".menu-list__link").on(eventClickTouch, function(event){
         
-        if ($(this).hasClass("dropdown-active")) {
+    //     if ($(this).hasClass("dropdown-active")) {
 
-            event.preventDefault();
-
-        }
-
-    });
-
-
-
-    // $(".dropdown-active").hover(
-        
-    //     function() {
-
-    //         $(this).find(".dropdown-menu").slideDown();        
-
-    //     },
-    
-    //     function() {
-
-    //         $(this).find(".dropdown-menu").slideUp();   
+    //         event.preventDefault();
 
     //     }
-    
-    // );
+
+    // });
 
 
     $(".dropdown-active").on({
