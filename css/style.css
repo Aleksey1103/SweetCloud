@@ -447,6 +447,7 @@ header {
       -ms-flex-align: start;
           align-items: flex-start;
   position: absolute;
+  top: -425px;
   left: 0;
   width: 100%;
   padding-bottom: 10px;

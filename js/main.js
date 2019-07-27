@@ -332,9 +332,10 @@ $(document).ready(function(){
 
         event.preventDefault();
 
+        $(".modal-btn").css("background-color", "#000");
+
         $(".btn-close").show();
-        //$(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
-        $(".modal-menu").slideDown();
+        $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
 
     });
 
