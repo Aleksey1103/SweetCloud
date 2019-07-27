@@ -328,43 +328,16 @@ $(document).ready(function(){
 
 
 
-    $(".btn-open").on(eventClickTouch, function(event){
+    $(".btn-open").on(eventClickTouch, function(event) {
 
-        // event.preventDefault();
-
-        // $(".btn-close").show();
-        // $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
-
-
-        
         event.preventDefault();
-        
-        let searchFildeWidth = $(this).offsetParent().parent().find(".search-container").css("width");
-        
-            if (searchFildeWidth == "0px") {
 
-                $(".search-container").css({width: "0", padding: "0"}).find(".search-container__field").css({display: "block", padding: "0"});
-                $(this).offsetParent().parent().find(".search-container").animate({width: "100%", padding: "0 20px"}, 300, function(){
-
-                    $(this).find(".search-container__field").css("padding", "0 18px");
-
-                });
-               
-            } else {
-
-                $(this).offsetParent().parent().find(".search-container").find(".search-container__field").css("padding", "0");
-                $(this).offsetParent().parent().find(".search-container").animate({width: "0", padding: "0"}, 300, function(){
-
-                    $(this).offsetParent().parent().find(".search-container").find(".search-container__field").css("display", "none"); 
-
-                });
-
-            }
-
+        $(".btn-close").show();
+        $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
 
     });
 
-    $(".btn-close").on(eventClickTouch, function(event){
+    $(".btn-close").on(eventClickTouch, function(event) {
 
         event.preventDefault();
 
