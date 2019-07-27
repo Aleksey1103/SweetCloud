@@ -635,16 +635,14 @@
                 width: calc(100vw - 40px)
 
     .block-goods
-        &-menu
+        &__menu
             flex-direction: column
             align-items: center
             padding: 15px 0
-            &__item
-                max-width: 50vw
-                .btn
-                    &_type_a
-                        margin: 9px 0
-                        max-width: 50vw
+            .btn
+                &_type_li
+                    margin: 9px 0
+                    max-width: 50vw
         .product-list
             grid-template-columns: 218px
             grid-template-rows: auto
@@ -927,7 +925,7 @@
     .block-products
         &__container
             padding: 24px 0 63px
-        &-menu
+        &__menu
             max-width: 200px
             flex-wrap: wrap
             margin: 0 auto

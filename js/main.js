@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 $(document).ready(function(){
 
@@ -76,142 +76,6 @@ $(document).ready(function(){
 
 
 
-    $(".btn-open").on(eventClickTouch, function(event){
-
-        event.preventDefault();
-
-        $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
-        $(".btn-close").show();
-
-    });
-
-
-    $(".block-quantity__btn").on(eventClickTouch, function(){
-
-        let btnType = this.dataset.btnMark,
-            quantityValue = $(this).offsetParent().find("input[name='quantity']").val();
-
-            if (btnType == "plus") {
-
-                quantityValue++;
-
-            } else if (btnType == "minus") {
-
-                while (quantityValue > 1) {
-
-                    quantityValue--;
-                    break;
-                } 
-            }
-
-        $(this).offsetParent().find("input[name='quantity']").val(quantityValue);
-      
-        showFinalOrderAmount();
-        changeElementSize();
-
-        return false;
-
-    });
-    
-
-    $(".block-presentation-grid__btn_pic").on(eventClickTouch, function(){
-
-        let imgSrc = $(this).parent().find("img").attr("src");
-
-            $(".modal-container").find(".modal-container__img").css("display", "block");
-            $(".modal-container").find("img").attr("src", imgSrc);
-            $(".modal-container").fadeIn(); 
-
-            $(".modal-container__btn-close").on(eventClickTouch, function(){
-
-                $(".modal-container").fadeOut(function(){
-
-                    $(this).find(".modal-container__img").css("display", "none");
-                    
-                });
-
-                return false;
-
-            });
-
-            return false;
-    });
-
-
-
-    $(".block-presentation-grid__btn_video").on(eventClickTouch, function(){
-
-        let videoSrc = $(this).attr("src");
-
-            $(".modal-container").find(".modal-container__video").css("display", "block");
-            $(".modal-container").find("iframe").attr("src", videoSrc);
-            $(".modal-container").fadeIn(); 
-
-            $(".modal-container__btn-close").on(eventClickTouch, function(){
-
-                $(".modal-container").find("iframe").attr("src", "");
-                $(".modal-container").fadeOut(function(){
-
-                    $(this).find(".modal-container__video").css("display", "none");
-                    
-                });
-
-                return false;
-
-            });
-
-            return false;
-    });
-   
-
-    $(".btn-close").on(eventClickTouch, function(event) {
-
-        event.preventDefault();
-
-        let backTop = $(".modal-menu").outerHeight();
-
-        $(".modal-menu").animate({top: -backTop}, 500, function(){
-
-            $(".modal-menu").removeAttr("style");
-            $(".btn-close").hide();
-
-        });
-
-    });
-
-
-    $("#blockOrderBtn").click(function(event){
-
-        event.preventDefault();
-
-        $(".modal-alert").css({"display": "flex", "opacity": "0"}).animate({opacity: 1}, 300);
-        
-        $(".modal-alert__btn").click(function(){
-
-            $(".modal-alert").animate({opacity: 0}, 300, function(){
-
-                $(".modal-alert").removeAttr("style");
-                $("form[name='sendOrder']").submit();
-            });
-
-        });
-
-        return false;
-
-    });
-    
-
-    $(".gifts-arrow").on(eventClickTouch, function(){
-
-        let giftSetsItem = document.getElementsByClassName("block-gifts__item slick-active")[0],
-        cost = giftSetsItem.dataset.itemCost;
-
-        document.getElementById("minCost").innerText = cost;
-
-    });
-
-
-
      $(window).scroll(function(){        
 
         let position = $(window).scrollTop(),
@@ -240,9 +104,7 @@ $(document).ready(function(){
 
 
 
-    $(".block-goods__btn").on(eventClickTouch, function(event){
-
-        event.preventDefault();
+    $(".block-goods__btn").on(eventClickTouch, function(){
 
         let windowSize = $(window).outerWidth(),
             groupName = $(this).attr("id");
@@ -287,9 +149,7 @@ $(document).ready(function(){
 
     $(".block-products").find(".product-list-item:gt(15)").hide();
 
-    $(".block-products__btn").on(eventClickTouch, function(event){
-
-        event.preventDefault();
+    $(".block-products__btn").on(eventClickTouch, function(){
 
        let counter = $(this).attr("id");
 
@@ -307,18 +167,18 @@ $(document).ready(function(){
        } else if(counter == "all") {
 
         $(".product-list-item").fadeIn();
-        $(".block-products-menu__item").hide();
-        $(this).text("Скрыть").attr("id", "hideAll").removeClass("btn_active");
-        $(this).parent().fadeIn();
+        $(".block-products__btn").hide();
+        $(this).text("Скрыть").attr("id", "hideAll").fadeIn();
         
        }  else {
 
         $(".product-list-item:gt(15)").fadeOut();
-        $(this).parent().fadeOut();
-        $(this).text("Показать все").attr("id", "all").removeClass("btn_active");
-        $(".block-products-menu__item").fadeIn();
+        $(this).fadeOut().text("Показать все").attr("id", "all");
+        $(".block-products__btn").fadeIn();
 
        }
+       
+       return false;
 
     });    
 
@@ -382,6 +242,141 @@ $(document).ready(function(){
     }
   
     showFinalOrderAmount();
-    changeElementSize(); 
+    changeElementSize();    
+
+    $(".block-quantity__btn").on(eventClickTouch, function(){
+
+        let btnType = this.dataset.btnMark,
+            quantityValue = $(this).offsetParent().find("input[name='quantity']").val();
+
+            if (btnType == "plus") {
+
+                quantityValue++;
+
+            } else if (btnType == "minus") {
+
+                while (quantityValue > 1) {
+
+                    quantityValue--;
+                    break;
+                } 
+            }
+
+        $(this).offsetParent().find("input[name='quantity']").val(quantityValue);
+      
+        showFinalOrderAmount();
+        changeElementSize();
+
+        return false;
+
+    });
+
+    
+
+    $(".block-presentation-grid__pic").on(eventClickTouch, function(){
+
+        let imgSrc = $(this).find("img").attr("src");
+
+            $(".modal-container").find(".modal-container__img").css("display", "block");
+            $(".modal-container").find("img").attr("src", imgSrc);
+            $(".modal-container").fadeIn(); 
+
+            $(".modal-container__btn-close").on(eventClickTouch, function(){
+
+                $(".modal-container").fadeOut(function(){
+
+                    $(this).find(".modal-container__img").css("display", "none");
+                    
+                });
+
+                return false;
+
+            });
+
+            return false;
+    });
+
+
+
+    $(".block-presentation-grid__btn").on(eventClickTouch, function(){
+
+        let videoSrc = $(this).attr("src");
+
+            $(".modal-container").find(".modal-container__video").css("display", "block");
+            $(".modal-container").find("iframe").attr("src", videoSrc);
+            $(".modal-container").fadeIn(); 
+
+            $(".modal-container__btn-close").on(eventClickTouch, function(){
+
+                $(".modal-container").find("iframe").attr("src", "");
+                $(".modal-container").fadeOut(function(){
+
+                    $(this).find(".modal-container__video").css("display", "none");
+                    
+                });
+
+                return false;
+
+            });
+
+            return false;
+    });
+
+
+
+    $(".btn-open").on(eventClickTouch, function(){
+
+        $(".btn-close").show();
+        $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
+
+        return false;
+
+    });
+
+    $(".btn-close").on(eventClickTouch, function(){
+
+        let backTop = $(".modal-menu").outerHeight();
+
+        $(".modal-menu").animate({top: -backTop}, 500, function(){
+
+            $(".modal-menu").removeAttr("style");
+            $(".btn-close").hide();
+
+        });
+
+        return false;
+
+    });
+
+
+    $("#blockOrderBtn").click(function(event){
+
+        event.preventDefault();
+
+        $(".modal-alert").css({"display": "flex", "opacity": "0"}).animate({opacity: 1}, 300);
+        
+        $(".modal-alert__btn").click(function(){
+
+            $(".modal-alert").animate({opacity: 0}, 300, function(){
+
+                $(".modal-alert").removeAttr("style");
+                $("form[name='sendOrder']").submit();
+            });
+
+        });
+
+        return false;
+
+    });
+
+    $(".gifts-arrow").on(eventClickTouch, function(){
+
+        let giftSetsItem = document.getElementsByClassName("block-gifts__item slick-active")[0],
+        cost = giftSetsItem.dataset.itemCost;
+
+        document.getElementById("minCost").innerText = cost;
+
+    });
+
 
 });
