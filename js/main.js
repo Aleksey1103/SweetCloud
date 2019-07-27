@@ -328,16 +328,18 @@ $(document).ready(function(){
 
 
 
-    $(".btn-open").on(eventClickTouch, function(){
+    $(".btn-open").on(eventClickTouch, function(event){
+
+        event.preventDefault();
 
         $(".btn-close").show();
         $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
 
-        return false;
-
     });
 
-    $(".btn-close").on(eventClickTouch, function(){
+    $(".btn-close").on(eventClickTouch, function(event){
+
+        event.preventDefault();
 
         let backTop = $(".modal-menu").outerHeight();
 
@@ -347,8 +349,6 @@ $(document).ready(function(){
             $(".btn-close").hide();
 
         });
-
-        return false;
 
     });
 
