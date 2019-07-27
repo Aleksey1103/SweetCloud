@@ -76,6 +76,17 @@ $(document).ready(function(){
 
 
 
+    $(".btn-open").on(eventClickTouch, function(event){
+
+        event.preventDefault();
+
+        $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
+        $(".btn-close").show();
+
+    });
+
+
+
      $(window).scroll(function(){        
 
         let position = $(window).scrollTop(),
@@ -325,17 +336,7 @@ $(document).ready(function(){
 
             return false;
     });
-
-
-
-    $(".btn-open").on(eventClickTouch, function(event) {
-
-        event.preventDefault();
-
-        $(".btn-close").show();
-        $(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
-
-    });
+   
 
     $(".btn-close").on(eventClickTouch, function(event) {
 
