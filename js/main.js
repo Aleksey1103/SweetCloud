@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
 
-    var eventClickTouch;
+    let eventClickTouch;
 
     if ("ontouchstart" in document.documentElement) {
 
@@ -28,21 +28,28 @@ $(document).ready(function(){
 
 
 
-    $(".dropdown-active").hover(
+    // $(".dropdown-active").hover(
         
-        function() {
+    //     function() {
 
-            $(this).find(".dropdown-menu").slideDown();        
+    //         $(this).find(".dropdown-menu").slideDown();        
 
-        },
+    //     },
     
-        function() {
+    //     function() {
 
-            $(this).find(".dropdown-menu").slideUp();   
+    //         $(this).find(".dropdown-menu").slideUp();   
 
-        }
+    //     }
     
-    );
+    // );
+
+
+    $(".dropdown-active").on({
+        "mouseenter": function() {$(this).find(".dropdown-menu").slideDown();},
+        "mouseleave": function() {$(this).find(".dropdown-menu").slideUp();},
+        "touchstart": function() {$(this).find(".dropdown-menu").slideToggle();}
+    });
 
 
     
