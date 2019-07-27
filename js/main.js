@@ -334,7 +334,7 @@ $(document).ready(function(){
 
         $(".btn-close").show();
         //$(".modal-menu").css("display", "flex").animate({top: "0px"}, 500);
-        $(".modal-menu").fadeIn();
+        $(".modal-menu").slideDown();
 
     });
 
